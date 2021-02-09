@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+  kitchen-sink:
+    build: ./docker/node
+    working_dir: /opt/kitchen-sink-app
+    user: '${RUN_UID}:${RUN_GID}'
+    ports:
+      - '5000:5000'
+    environment:
+      - HOME=/home/kitchen-sink
+    env_file:
+      - .env
+    volumes:
+      - ./:/opt/kitchen-sink-app:cached
+      - home:/home/kitchen-sink
+      - node-modules:/opt/kitchen-sink-app/node_modules
+  change-volume-owner:
+    image: node:10.15.3-alpine@sha256:b85a3b0ef76f5543b3f467e8a25694e72594d2c2bfcf140fa584d4f40ace4130
+    volumes:
+      - home:/opt/kitchen-sink-volumes/home
+      - node-modules:/opt/kitchen-sink-volumes/node_modules
+    command: |
+      sh -c "chown ${RUN_UID}:${RUN_GID} /opt/kitchen-sink-volumes/*"
+volumes:
+  home:
+  node-modules:

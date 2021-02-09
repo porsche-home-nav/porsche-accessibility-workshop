@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kitchen Sink</title>
+    <base href="/" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./style/styles.min.css" />
+    <script src="node_modules/@porsche-design-system/components-js/index.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      porscheDesignSystem.load();
+    </script>
+    <p-content-wrapper>
+      <div class="ks-header">
+        <p-flex align-items="flex-end">
+          <p-flex-item>
+            <a href="#" class="ks-header__marque">
+              <p-marque></p-marque>
+            </a>
+          </p-flex-item>
+          <p-flex-item>
+            <div class="ks-header__nav">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+              <a href="#">Link 4</a>
+              <a href="#">Link 5</a>
+            </div>
+          </p-flex-item>
+        </p-flex>
+      </div>
+    </p-content-wrapper>
+    <div class="ks-main">
+      <p-content-wrapper width="extended">
+        <div class="ks-hero">
+          <a href="#">
+            <p-content-wrapper class="ks-hero__text">
+              <p-button-pure size="x-large" weight="thin" theme="dark">
+                Porsche Design System Kitchen Sink
+              </p-button-pure>
+            </p-content-wrapper>
+            <img src="./assets/ks-hero-01.webp" class="ks-hero__mood" />
+          </a>
+        </div>
+      </p-content-wrapper>
+      <p-content-wrapper>
+        <div class="ks-cards">
+          <p-grid>
+            <p-grid-item size="4">
+              <div class="ks-card-item">
+                <p-headline variant="headline-3">Porsche Taycan</p-headline>
+                <p-button>Click here!</p-button>
+              </div>
+            </p-grid-item>
+            <p-grid-item size="4">
+              <div class="ks-card-item">
+                <p-headline variant="headline-3">Porsche Taycan</p-headline>
+                <p-button>Click here!</p-button>
+              </div>
+            </p-grid-item>
+            <p-grid-item size="4">
+              <div class="ks-card-item">
+                <p-headline variant="headline-3">Porsche Taycan</p-headline>
+                <p-button>Click here!</p-button>
+              </div>
+            </p-grid-item>
+          </p-grid>
+        </div>
+        <div class="ks-contact">
+          <form novalidate action="#">
+            <p-headline variant="headline-4">Get in touch</p-headline>
+            <p-flex class="ks-form__grid-item-container">
+              <p-flex-item
+                width="{base: 'full', m: 'half'}"
+                class="ks-form__grid-item"
+              >
+                <p-select-wrapper label="Category">
+                  <select required>
+                    <option value hidden></option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </p-select-wrapper>
+              </p-flex-item>
+            </p-flex>
+            <p-text-field-wrapper label="Subject" class="ks-form__row-spacing">
+              <input type="text" required />
+            </p-text-field-wrapper>
+            <p-textarea-wrapper
+              label="Your message"
+              class="ks-form__row-spacing"
+            >
+              <textarea required></textarea>
+            </p-textarea-wrapper>
+            <p-flex
+              direction="{ base: 'column', m: 'row' }"
+              class="ks-form__grid-item-container"
+            >
+              <p-flex-item
+                width="{base: 'full', m: 'one-third'}"
+                class="ks-form__grid-item"
+              >
+                <p-select-wrapper label="Salutation">
+                  <select required>
+                    <option value hidden></option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                  </select>
+                </p-select-wrapper>
+              </p-flex-item>
+              <p-flex-item
+                width="{base: 'full', m: 'one-third'}"
+                class="ks-form__row-spacing ks-form__row-spacing--zero-m ks-form__grid-item"
+              >
+                <p-select-wrapper label="Title">
+                  <select>
+                    <option value></option>
+                    <option value="option 1">Dr.</option>
+                    <option value="option 2">Prof.</option>
+                    <option value="option 3">Prof. Dr.</option>
+                  </select>
+                </p-select-wrapper>
+              </p-flex-item>
+            </p-flex>
+            <p-flex
+              direction="{ base: 'column', m: 'row' }"
+              class="ks-form__row-spacing ks-form__grid-item-container"
+            >
+              <p-flex-item
+                width="{base: 'full', m: 'half'}"
+                class="ks-form__grid-item"
+              >
+                <p-text-field-wrapper label="First name">
+                  <input type="text" required />
+                </p-text-field-wrapper>
+              </p-flex-item>
+              <p-flex-item
+                width="{base: 'full', m: 'half'}"
+                class="ks-form__row-spacing ks-form__row-spacing--zero-m ks-form__grid-item"
+              >
+                <p-text-field-wrapper label="Last name">
+                  <input type="text" required />
+                </p-text-field-wrapper>
+              </p-flex-item>
+            </p-flex>
+            <p-text-field-wrapper
+              label="Email address"
+              class="ks-form__row-spacing"
+            >
+              <input type="email" required />
+            </p-text-field-wrapper>
+            <p-text-field-wrapper
+              label="Phone number"
+              class="ks-form__row-spacing"
+            >
+              <input type="tel" />
+            </p-text-field-wrapper>
+            <p-flex
+              class="ks-form__section-spacing ks-form__grid-item-container"
+            >
+              <p-flex-item class="ks-form__grid-item">
+                <p-checkbox-wrapper>
+                  <span slot="label">
+                    I have read and understood the
+                    <a href="#" target="_blank">Privacy Policy</a>
+                  </span>
+                  <input type="checkbox" required />
+                </p-checkbox-wrapper>
+              </p-flex-item>
+            </p-flex>
+            <p-flex
+              direction="{ base: 'column', s: 'row' }"
+              class="ks-form__section-spacing ks-form__bottom-spacing ks-form__grid-item-container"
+            >
+              <p-flex-item
+                width="{base: 'full', s: 'auto'}"
+                class="ks-form__grid-item"
+              >
+                <p-button
+                  type="submit"
+                  class="ks-form__item-width--full ks-form__item-width--auto-s"
+                >
+                  Send
+                </p-button>
+              </p-flex-item>
+              <p-flex-item
+                width="{base: 'full', s: 'auto'}"
+                class="ks-form__row-spacing ks-form__row-spacing--zero-s ks-form__grid-item"
+              >
+                <p-button
+                  variant="tertiary"
+                  icon="close"
+                  class="ks-form__item-width--full ks-form__item-width--auto-s"
+                  @click="onReset"
+                >
+                  Cancel
+                </p-button>
+              </p-flex-item>
+            </p-flex>
+          </form>
+        </div>
+      </p-content-wrapper>
+    </div>
+    <p-content-wrapper width="extended">
+      <div class="ks-footer">
+        <p-grid>
+          <p-grid-item size="3">
+            <p-headline variant="headline-6" theme="dark">About</p-headline>
+          </p-grid-item>
+        </p-grid>
+      </div>
+    </p-content-wrapper>
+  </body>
+</html>

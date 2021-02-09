@@ -1,0 +1,29 @@
+@import "~@porsche-design-system/utilities/scss";
+.ks-header {
+  position: relative;
+
+  &__marque {
+    position: relative;
+    display: block;
+    padding: $p-spacing-32 $p-spacing-8;
+    border: 1px solid $p-color-neutral-contrast-low;
+    margin-bottom: -12px;
+    z-index: 2;
+    background-color: #fff;
+  }
+
+  &__nav {
+    display: flex;
+    padding-bottom: $p-spacing-24;
+    a {
+      display: block;
+      padding: 0 $p-spacing-24;
+      @include p-generate-font-definition(
+        $p-font-size-small,
+        $p-font-weight-regular
+      );
+      color: $p-color-default;
+      text-decoration: none;
+    }
+  }
+}
