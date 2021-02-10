@@ -5,10 +5,12 @@
   &__mood {
     width: 100%;
     height: auto;
+    opacity: 0.7;
   }
 
   &__text {
     position: absolute;
     bottom: 10%;
+    z-index: 1;
   }
 }

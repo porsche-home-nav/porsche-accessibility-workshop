@@ -1,4 +1,4 @@
-@import "components/card";
+@import "components/cards";
 @import "components/form";
 @import "components/footer";
 @import "components/header";
@@ -9,4 +9,8 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+}
+
+a {
+  text-decoration: none;
 }

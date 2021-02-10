@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "yarn build && serve ./dist",
-    "start:watch": "yarn start && npm-watch",
+    "start:watch": "npm-watch & yarn start",
     "build": "yarn clean && yarn build:index && yarn build:css && yarn build:assets && yarn build:node_modules",
     "build:index": "mkdir -p dist/node_modules && cp ./public/index.html ./dist",
     "build:css": "ts-node --project 'tsconfig.node.json' './scripts/build-css.ts'",
