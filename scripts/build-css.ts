@@ -4,7 +4,7 @@ import * as path from 'path';
 (async (): Promise<void> => {
   const sass = require('node-sass');
   const tildeImporter = require('node-sass-tilde-importer');
-  fs.mkdirSync(path.resolve('./dist/style'), { recursive: true });
+  fs.mkdirSync(path.resolve('./build/style'), { recursive: true });
 
   const scssPath = path.resolve(__dirname, '../src/scss/index.scss');
   const result = sass.renderSync({
@@ -14,7 +14,7 @@ import * as path from 'path';
   });
 
   const filename = 'styles.min.css';
-  const targetPath = path.normalize(`./dist/style/${filename}`);
+  const targetPath = path.normalize(`./build/style/${filename}`);
 
   fs.writeFileSync(targetPath, result.css);
 })();
