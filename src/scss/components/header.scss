@@ -10,11 +10,17 @@
     margin-bottom: -12px;
     z-index: 2;
     background-color: #fff;
+
+    &:focus {
+      @include p-focus();
+      color: #000;
+    }
   }
 
   &__nav {
     display: flex;
     padding-bottom: $p-spacing-24;
+    padding-left: $p-spacing-24;
     a {
       display: block;
       padding: 0 $p-spacing-24;
@@ -24,6 +30,10 @@
       );
       color: $p-color-default;
       text-decoration: none;
+
+      &:focus {
+        @include p-focus();
+      }
     }
   }
 }

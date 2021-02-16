@@ -3,6 +3,7 @@
 @import "components/footer";
 @import "components/header";
 @import "components/hero";
+@import "components/text-content";
 
 * {
   margin: 0;
@@ -13,4 +14,97 @@
 
 a {
   text-decoration: none;
+}
+
+.-spacing-mt-8 {
+  margin-top: $p-layout-small;
+}
+
+.-spacing-mt-16 {
+  margin-top: $p-layout-medium;
+}
+
+.-spacing-mt-24 {
+  margin-top: $p-spacing-24;
+}
+
+.-spacing-mt-32 {
+  margin-top: $p-layout-large;
+}
+
+.-spacing-mr-32 {
+  margin-right: $p-layout-large;
+}
+
+.-spacing-mt-48 {
+  margin-top: $p-layout-x-large;
+}
+
+.-spacing-mt-56 {
+  margin-top: $p-spacing-56;
+}
+
+.-spacing-mt-80 {
+  margin-top: $p-layout-xx-large;
+}
+
+.ks-skip-link {
+  position: absolute;
+  top: -100%;
+  &:focus,
+  &:focus-visible {
+    top: 0;
+    z-index: 2;
+  }
+}
+
+/**
+ * Initialiazing a `footnotes` counter on the wrapper
+ */
+main {
+  counter-reset: footnotes;
+}
+
+/**
+ * Inline footnotes references
+ * 1. Increment the counter at each new reference
+ * 2. Reset link styles to make it appear like regular text
+ */
+a[aria-describedby*="ks-footnote-label"] {
+  counter-increment: footnotes;
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: default !important;
+  outline: none !important;
+  &:hover {
+    color: inherit !important;
+  }
+}
+
+/**
+ * Actual numbered references
+ * 1. Display the current state of the counter (e.g. `[1]`)
+ * 2. Align text as superscript
+ * 3. Make the number smaller (since it's superscript)
+ * 4. Slightly offset the number from the text
+ * 5. Reset link styles on the number to show it's usable
+ */
+a[aria-describedby*="ks-footnote-label"] {
+  &::after {
+    content: "[" counter(footnotes) "]";
+    vertical-align: super;
+    font-size: p-px-to-rem(12px);
+    margin-left: 2px;
+    color: $p-color-default;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &:hover::after {
+    color: $p-color-state-hover;
+  }
+
+  &:focus::after {
+    outline: $p-color-state-focus solid 1px;
+  }
 }
