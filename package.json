@@ -37,8 +37,9 @@
     "build:assets": "cd ./src/ && cp -R './assets' ../build",
     "build:node_modules": "cp -R ./node_modules/@porsche-design-system ./build/node_modules",
     "build:clean-folders": "find ./build -maxdepth 5 -type d -name .bin -exec rm -rf {} \\;",
-    "postbuild:index": "yarn replace",
-    "replace": "placeholder='<!--PLACEHOLDER_PORSCHE_DESIGN_SYSTEM_INITIAL_STYLES-->' && partial=$placeholder$(node -e 'console.log(require(\"@porsche-design-system/components-js/partials\").getInitialStyles())') && regex=$placeholder'.*' && sed -i '' -E -e \"s@$regex@$partial@\" ./build/index.html && regex=$placeholder'.*' && sed -i '' -E -e \"s@$regex@$partial@\" ./build/index-accessible.html",
+    "postbuild:index": "yarn replace:intitialStyles",
+    "replace:intitialStyles": "placeholder='<!--PLACEHOLDER_PORSCHE_DESIGN_SYSTEM_INITIAL_STYLES-->' && partial=$placeholder$(node -e 'console.log(require(\"@porsche-design-system/components-js/partials\").getInitialStyles())') && regex=$placeholder'.*' && sed -E -e \"s@$regex@$partial@\" ./build/index.html > ./build/index.tmp.html && sed -E -e \"s@$regex@$partial@\" ./build/index-accessible.html > ./build/index-accessible.tmp.html && yarn replace:renameIndexHtml",
+    "replace:renameIndexHtml": "rm ./build/index.html && mv ./build/index.tmp.html ./build/index.html && rm ./build/index-accessible.html && mv ./build/index-accessible.tmp.html ./build/index-accessible.html",
     "clean": "rm -rf ./build",
     "prettier": "prettier --write '**/*.html'"
   },
