@@ -21,12 +21,12 @@
     <script type="text/javascript">
       porscheDesignSystem.load();
     </script>
-    <!-- A11y issue: The skip-link target should exist and be focusable (https://dequeuniversity.com/rules/axe/4.1/skip-link) -->
-    <a href="#ks-main-content" class="ks-skip-link">
-      <p-link>Skip to Content</p-link>
-    </a>
     <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
     <header class="ks-header">
+      <!-- A11y issue: The skip-link target should exist and be focusable (https://dequeuniversity.com/rules/axe/4.1/skip-link) -->
+      <a href="#ks-main-content" class="ks-skip-link">
+        <p-link>Skip to Content</p-link>
+      </a>
       <p-content-wrapper>
         <p-flex align-items="flex-end">
           <p-flex-item>
@@ -36,16 +36,28 @@
             </a>
           </p-flex-item>
           <p-flex-item>
-            <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
+            <!-- A11y issue: Add more HTML semantic (https://www.w3.org/WAI/tutorials/menus/structure/#identify-menus) -->
             <nav class="ks-header__nav">
-              <!-- A11y issue: Add more HTML semantic (https://www.w3.org/WAI/tutorials/menus/structure/#identify-menus) -->
-              <!-- A11y issue: Indicate the current item (https://www.w3.org/WAI/tutorials/menus/structure/#indicate-the-current-item) -->
-              <!-- A11y issue: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible (https://www.w3.org/WAI/WCAG21/quickref/#focus-visible) -->
-              <a href="#" aria-current="page">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-              <a href="#">Link 4</a>
-              <a href="#">Link 5</a>
+              <!-- A11y issue: Use HTML structuring elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#text_content) -->
+              <ul>
+                <li>
+                  <!-- A11y issue: Indicate the current item (https://www.w3.org/WAI/tutorials/menus/structure/#indicate-the-current-item) -->
+                  <!-- A11y issue: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible (https://www.w3.org/WAI/WCAG21/quickref/#focus-visible) -->
+                  <a href="#" aria-current="page">Link 1</a>
+                </li>
+                <li>
+                  <a href="#">Link 2</a>
+                </li>
+                <li>
+                  <a href="#">Link 3</a>
+                </li>
+                <li>
+                  <a href="#">Link 4</a>
+                </li>
+                <li>
+                  <a href="#">Link 5</a>
+                </li>
+              </ul>
             </nav>
           </p-flex-item>
         </p-flex>
@@ -56,19 +68,26 @@
       <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
       <section class="ks-hero">
         <p-content-wrapper width="extended">
-          <a href="#">
-            <p-content-wrapper class="ks-hero__text">
-              <!-- A11y issue: HTML validation error: do not nest <button> inside link <a> -->
-              <!-- A11y issue: Text elements must have sufficient color contrast against the background (https://dequeuniversity.com/rules/axe/4.1/color-contrast) -->
-              <!-- A11y issue: Page must contain a level-one heading (https://dequeuniversity.com/rules/axe/4.1/page-has-heading-one) -->
-              <p-link-pure size="x-large" weight="thin" theme="dark">
-                <p-headline color="inherit" variant="inherit">
-                  Porsche Design System Kitchen Sink
-                </p-headline>
-              </p-link-pure>
-            </p-content-wrapper>
-            <img src="./assets/ks-hero-01.webp" class="ks-hero__mood" />
-          </a>
+          <!-- A11y issue: Do not wrap link element around whole card component. Instead make use of the CSS pseudo-content trick (https://inclusive-components.design/cards/#thepseudocontenttrick)-->
+          <p-content-wrapper class="ks-hero__text">
+            <!-- A11y issue: HTML validation error: do not nest <button> inside link <a> -->
+            <!-- A11y issue: Text elements must have sufficient color contrast against the background (https://dequeuniversity.com/rules/axe/4.1/color-contrast) -->
+            <!-- A11y issue: Page must contain a level-one heading (https://dequeuniversity.com/rules/axe/4.1/page-has-heading-one) -->
+            <p-link-pure size="x-large" weight="thin" theme="dark">
+              <p-headline color="inherit" variant="inherit">
+                <!-- A11y improvement: Separate link target text from subline -->
+                <a href="#">Porsche Design System Kitchen Sink</a>
+              </p-headline>
+              <p name="subline">Lorem ipsum dolor sit amet consecutor.</p>
+            </p-link-pure>
+          </p-content-wrapper>
+          <div class="ks-hero__mood">
+            <!-- A11y issue: Images must have alternate text (https://dequeuniversity.com/rules/axe/4.1/image-alt) -->
+            <img
+              src="./assets/ks-hero-01.webp"
+              alt="Porsche Taican in an urban environment"
+            />
+          </div>
         </p-content-wrapper>
       </section>
       <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
@@ -101,7 +120,7 @@
                   provide peace of mind allowing you to simply enjoy the drive.
                 </p-text>
                 <!-- A11y issue: Links must have discernible and descriptive text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
-                <p-link>
+                <p-link variant="tertiary">
                   <a href="#">Order Protection Plan</a>
                 </p-link>
               </div>
@@ -127,7 +146,7 @@
                   you can link your account after registering your vehicle in My
                   Porsche.
                 </p-text>
-                <p-link>
+                <p-link variant="tertiary">
                   <a href="#">Get information of My Porsche</a>
                 </p-link>
               </div>
@@ -138,6 +157,7 @@
                   variant="headline-4"
                   tag="h2"
                   class="ks-cards__headline"
+                  style="color: #000"
                 >
                   Lorem ipsum
                 </p-headline>
@@ -152,7 +172,7 @@
                   Zubehör Lösungen: Das vielfältige Produktprogramm finden Sie
                   in unserem Porsche.
                 </p-text>
-                <p-link>
+                <p-link variant="tertiary">
                   <a href="#">More information about XYZ</a>
                 </p-link>
               </div>
@@ -239,6 +259,7 @@
                       width="{base: 'full', m: 'half'}"
                       class="ks-form__grid-item"
                     >
+                      <!-- A11y issue: select element must have an accessible name (https://dequeuniversity.com/rules/axe/4.1/select-name) -->
                       <p-select-wrapper label="Category">
                         <select name="category" required>
                           <option value hidden></option>
@@ -253,7 +274,7 @@
                     label="Subject"
                     class="ks-form__row-spacing"
                   >
-                    <input type="text" name="subject" required />
+                    <input name="subject" type="text" required />
                   </p-text-field-wrapper>
                   <p-textarea-wrapper
                     label="Your message"
@@ -328,6 +349,7 @@
                     label="Phone number"
                     class="ks-form__row-spacing"
                   >
+                    <!-- A11y improvement: add corresponding input type -->
                     <input name="tel" type="tel" />
                   </p-text-field-wrapper>
                 </p-fieldset-wrapper>
@@ -352,24 +374,26 @@
                     width="{base: 'full', s: 'auto'}"
                     class="ks-form__grid-item"
                   >
+                    <!-- A11y issue: Links must have discernible and descriptive text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
                     <p-button
                       type="submit"
                       class="ks-form__item-width--full ks-form__item-width--auto-s"
                     >
-                      OK
+                      Send form
                     </p-button>
                   </p-flex-item>
                   <p-flex-item
                     width="{base: 'full', s: 'auto'}"
                     class="ks-form__row-spacing ks-form__row-spacing--zero-s ks-form__grid-item"
                   >
+                    <!-- A11y issue: Links must have discernible and descriptive text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
                     <p-button
                       variant="tertiary"
                       type="reset"
-                      hide-label="true"
                       icon="close"
                       class="ks-form__item-width--full ks-form__item-width--auto-s"
                     >
+                      Reset form values
                     </p-button>
                   </p-flex-item>
                 </p-flex>
@@ -386,7 +410,7 @@
           <p-grid>
             <p-grid-item size="3">
               <!-- A11y issue: Heading levels should only increase by one (https://dequeuniversity.com/rules/axe/4.1/heading-order) -->
-              <p-headline variant="headline-5" tag="h2" theme="dark">
+              <p-headline variant="headline-4" tag="h2" theme="dark">
                 Lorem ipsum
               </p-headline>
             </p-grid-item>
@@ -398,6 +422,7 @@
               Copyright Text Home Page link Testing special characters
               originální příslušenstvíCookie Policy. Contact Us via E-mail.
             </p-text>
+            <!-- A11y issue: make footnotes accessible (https://www.sitepoint.com/accessible-footnotes-css/) -->
             <p-text
               id="ks-footnote-label-1"
               theme="dark"
@@ -417,6 +442,7 @@
               September 2018. You can find more information on the difference
               between WLTP and NEDC at www.porsche.com/wltp.
             </p-text>
+            <!-- A11y issue: make footnotes accessible (https://www.sitepoint.com/accessible-footnotes-css/) -->
             <p-text
               id="ks-footnote-label-2"
               theme="dark"

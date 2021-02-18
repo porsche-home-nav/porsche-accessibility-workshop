@@ -3,14 +3,54 @@
   position: relative;
 
   &__mood {
-    width: 100%;
-    height: auto;
-    opacity: 0.7;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      opacity: 0.7;
+    }
   }
 
   &__text {
     position: absolute;
     bottom: 10%;
     z-index: 1;
+  }
+}
+
+.ks-accessible {
+  .ks-hero {
+    transform: translate3d(0, 0, 0); // add new context for fixed
+
+    &__mood {
+      img {
+        opacity: 1;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+          -180deg,
+          rgba(0, 0, 0, 0) 37%,
+          rgba(0, 0, 0, 0.3) 67%,
+          rgba(0, 0, 0, 0.8) 100%
+        );
+      }
+    }
+
+    // the CSS pseudo-content trick
+    p-link-pure a::after {
+      content: "";
+      position: fixed; // workaround because of position relative in slot context
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
   }
 }

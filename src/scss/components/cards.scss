@@ -2,6 +2,16 @@
 .ks-cards {
   position: relative;
 
+  p-grid-item + p-grid-item {
+    margin-top: $p-spacing-32;
+  }
+
+  @include p-media-query("m") {
+    p-grid-item + p-grid-item {
+      margin-top: 0;
+    }
+  }
+
   &__item {
     height: 100%;
     display: flex;
@@ -18,14 +28,6 @@
     height: auto;
     margin: #{-$p-spacing-24} #{-$p-spacing-24} 0 #{-$p-spacing-24};
   }
-
-  //&__desc-container {
-  //  padding: $p-spacing-24;
-  //  display: flex;
-  //  height: inherit;
-  //  flex-flow: column;
-  //  background-color: #fff;
-  //}
 
   &__headline {
     margin-bottom: $p-spacing-16;
@@ -58,6 +60,11 @@
       order: -1;
     }
 
+    &__headline {
+      color: inherit;
+    }
+
+    // the CSS pseudo-content trick
     p-link a::after {
       content: "";
       position: fixed; // workaround because of position relative in slot context

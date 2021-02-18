@@ -48,16 +48,6 @@ a {
   margin-top: $p-layout-xx-large;
 }
 
-.ks-skip-link {
-  position: absolute;
-  top: -100%;
-  &:focus,
-  &:focus-visible {
-    top: 0;
-    z-index: 2;
-  }
-}
-
 /**
  * Initialiazing a `footnotes` counter on the wrapper
  */

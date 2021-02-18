@@ -2,6 +2,16 @@
 .ks-header {
   position: relative;
 
+  .ks-skip-link {
+    position: absolute;
+    top: -100%;
+    &:focus,
+    &:focus-visible {
+      top: 0;
+      z-index: 2;
+    }
+  }
+
   &__marque {
     position: relative;
     display: block;
@@ -10,17 +20,15 @@
     margin-bottom: -12px;
     z-index: 2;
     background-color: #fff;
-
-    &:focus {
-      @include p-focus();
-      color: #000;
-    }
   }
 
   &__nav {
-    display: flex;
     padding-bottom: $p-spacing-24;
     padding-left: $p-spacing-24;
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
     a {
       display: block;
       padding: 0 $p-spacing-24;
@@ -30,9 +38,24 @@
       );
       color: $p-color-default;
       text-decoration: none;
+    }
+  }
+}
 
+.ks-accessible {
+  .ks-header {
+    &__marque {
       &:focus {
         @include p-focus();
+        color: #000;
+      }
+    }
+
+    &__nav {
+      a {
+        &:focus {
+          @include p-focus();
+        }
       }
     }
   }
