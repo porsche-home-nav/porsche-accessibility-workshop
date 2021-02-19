@@ -1,0 +1,29 @@
+@import "~@porsche-design-system/utilities/scss";
+.ks-carousel {
+  position: relative;
+}
+
+.splide {
+  // pagination dots
+  &__pagination {
+    display: flex;
+    li {
+    }
+
+    &__page {
+      display: block;
+      border-radius: 50%;
+      width: $p-spacing-16;
+      height: $p-spacing-16;
+      background-color: $p-color-background-surface;
+      border: 1px solid $p-color-default;
+
+      &.is-active {
+        background-color: $p-color-state-active;
+      }
+    }
+  }
+}
+
+.ks-accessible {
+}

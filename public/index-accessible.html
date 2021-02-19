@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- A11y issue: <html> element must have a lang attribute (https://dequeuniversity.com/rules/axe/4.1/html-has-lang) -->
-<html lang="en" class="ks-accessible">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <!-- A11y issue: Documents must contain a descriptive title element to aid in navigation (https://dequeuniversity.com/rules/axe/4.1/document-title) -->
@@ -17,7 +17,7 @@
     <script src="node_modules/@porsche-design-system/components-js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   </head>
-  <body>
+  <body class="ks-accessible">
     <script type="text/javascript">
       porscheDesignSystem.load();
     </script>
@@ -182,9 +182,34 @@
       </section>
       <section class="ks-carousel">
         <p-content-wrapper class="-spacing-mt-48">
-          <div>your content</div>
-          <div>your content</div>
-          <div>your content</div>
+          <div class="splide">
+            <div class="splide__arrows">
+              <p-button
+                hide-label="true"
+                icon="arrow-head-left"
+                class="splide__arrow splide__arrow--prev"
+              >
+                Prev
+              </p-button>
+              <p-button
+                hide-label="true"
+                icon="arrow-head-right"
+                class="splide__arrow splide__arrow--next"
+              >
+                Next
+              </p-button>
+            </div>
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">Slide 01</li>
+                <li class="splide__slide">Slide 02</li>
+                <li class="splide__slide">Slide 03</li>
+                <li class="splide__slide">Slide 04</li>
+                <li class="splide__slide">Slide 05</li>
+                <li class="splide__slide">Slide 06</li>
+              </ul>
+            </div>
+          </div>
         </p-content-wrapper>
       </section>
       <section class="ks-text-content">
@@ -460,5 +485,9 @@
         </p-content-wrapper>
       </p-content-wrapper>
     </footer>
+
+    <script>
+      new Splide(".splide").mount();
+    </script>
   </body>
 </html>

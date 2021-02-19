@@ -25,10 +25,8 @@
   &__nav {
     padding-bottom: $p-spacing-24;
     padding-left: $p-spacing-24;
-    ul {
-      display: flex;
-      list-style-type: none;
-    }
+    display: flex;
+
     a {
       display: block;
       padding: 0 $p-spacing-24;
@@ -52,6 +50,12 @@
     }
 
     &__nav {
+      display: block;
+
+      ul {
+        display: flex;
+        list-style-type: none;
+      }
       a {
         &:focus {
           @include p-focus();
