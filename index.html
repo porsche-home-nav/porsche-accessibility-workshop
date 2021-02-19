@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Dealer page</title>
+    <title>Test</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
@@ -42,9 +42,12 @@
           <p-content-wrapper class="ks-hero__text">
             <p-button-pure size="x-large" weight="thin" theme="dark">
               Porsche Design System Kitchen Sink
+              <p name="subline">Lorem ipsum dolor sit amet consecutor.</p>
             </p-button-pure>
           </p-content-wrapper>
-          <img src="./assets/ks-hero-01.webp" class="ks-hero__mood" />
+          <div class="ks-hero__mood">
+            <img src="./assets/ks-hero-01.webp" />
+          </div>
         </a>
       </p-content-wrapper>
     </div>
@@ -167,9 +170,9 @@
                   width="{base: 'full', m: 'half'}"
                   class="ks-form__grid-item"
                 >
-                  <p-select-wrapper label="Category">
-                    <select required>
-                      <option value hidden></option>
+                  <p-select-wrapper>
+                    <select name="category" required>
+                      <option value selected disabled>Choose Category</option>
                       <option value="1">Option 1</option>
                       <option value="2">Option 2</option>
                       <option value="3">Option 3</option>
@@ -181,13 +184,13 @@
                 label="Subject"
                 class="ks-form__row-spacing"
               >
-                <input type="text" required />
+                <input name="subject" type="text" required />
               </p-text-field-wrapper>
               <p-textarea-wrapper
                 label="Your message"
                 class="ks-form__row-spacing"
               >
-                <textarea required></textarea>
+                <textarea name="message" required></textarea>
               </p-textarea-wrapper>
               <p-flex
                 direction="{ base: 'column', m: 'row' }"
@@ -198,7 +201,7 @@
                   class="ks-form__grid-item"
                 >
                   <p-select-wrapper label="Salutation">
-                    <select required>
+                    <select name="salutation" required>
                       <option value hidden></option>
                       <option value="Mr.">Mr.</option>
                       <option value="Mrs.">Mrs.</option>
@@ -210,7 +213,7 @@
                   class="ks-form__row-spacing ks-form__row-spacing--zero-m ks-form__grid-item"
                 >
                   <p-select-wrapper label="Title">
-                    <select>
+                    <select name="title">
                       <option value></option>
                       <option value="option 1">Dr.</option>
                       <option value="option 2">Prof.</option>
@@ -228,7 +231,7 @@
                   class="ks-form__grid-item"
                 >
                   <p-text-field-wrapper label="First name">
-                    <input type="text" required />
+                    <input name="name" type="text" required />
                   </p-text-field-wrapper>
                 </p-flex-item>
                 <p-flex-item
@@ -236,7 +239,7 @@
                   class="ks-form__row-spacing ks-form__row-spacing--zero-m ks-form__grid-item"
                 >
                   <p-text-field-wrapper label="Last name">
-                    <input type="text" required />
+                    <input name="surname" type="text" required />
                   </p-text-field-wrapper>
                 </p-flex-item>
               </p-flex>
@@ -244,13 +247,13 @@
                 label="Email address"
                 class="ks-form__row-spacing"
               >
-                <input type="email" required />
+                <input name="email" type="email" required />
               </p-text-field-wrapper>
               <p-text-field-wrapper
                 label="Phone number"
                 class="ks-form__row-spacing"
               >
-                <input type="tel" />
+                <input name="tel" type="text" />
               </p-text-field-wrapper>
               <p-flex
                 class="ks-form__section-spacing ks-form__grid-item-container"
@@ -261,7 +264,7 @@
                       I have read and understood the
                       <a href="#" target="_blank">Privacy Policy</a>
                     </span>
-                    <input type="checkbox" required />
+                    <input name="privacy" type="checkbox" required />
                   </p-checkbox-wrapper>
                 </p-flex-item>
               </p-flex>
