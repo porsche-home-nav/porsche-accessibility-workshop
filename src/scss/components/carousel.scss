@@ -1,29 +1,106 @@
 @import "~@porsche-design-system/utilities/scss";
 .ks-carousel {
   position: relative;
-}
 
-.splide {
-  // pagination dots
-  &__pagination {
-    display: flex;
-    li {
+  &__mood {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  p-link {
+    margin-left: auto;
+  }
+
+  // Slider plugin functional styles
+  .splide {
+    &__arrows {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      pointer-events: none;
     }
 
-    &__page {
-      display: block;
-      border-radius: 50%;
-      width: $p-spacing-16;
-      height: $p-spacing-16;
-      background-color: $p-color-background-surface;
-      border: 1px solid $p-color-default;
+    &__arrow {
+      pointer-events: all;
+    }
 
-      &.is-active {
-        background-color: $p-color-state-active;
+    &__arrow--prev {
+      margin-left: -$p-spacing-48;
+    }
+
+    &__arrow--next {
+      margin-right: -$p-spacing-48;
+    }
+
+    &__list {
+      flex-wrap: nowrap !important;
+    }
+
+    &__slide {
+      padding-bottom: $p-spacing-8;
+      text-align: center;
+      &:focus {
+        outline: 2px solid red;
+      }
+    }
+
+    &__pagination {
+      display: flex;
+      width: 100%;
+      margin-top: $p-spacing-32;
+      margin-bottom: $p-spacing-32;
+
+      &__page {
+        display: block;
+        border-radius: 50%;
+        width: p-px-to-rem(12px);
+        height: p-px-to-rem(12px);
+        background-color: $p-color-neutral-contrast-medium;
+        border: none;
+
+        &.is-active {
+          background-color: $p-color-state-active;
+        }
       }
     }
   }
 }
 
 .ks-accessible {
+  .ks-carousel {
+    .splide {
+      &__slide {
+        position: relative;
+        transform: translate3d(0, 0, 0); // add new context for fixed
+      }
+
+      &__pagination {
+        li {
+          padding: $p-spacing-4;
+        }
+        &__page {
+          cursor: pointer;
+
+          &:focus {
+            @include p-focus();
+          }
+        }
+      }
+    }
+
+    // the CSS pseudo-content trick
+    p-link a::after {
+      content: "";
+      position: fixed; // workaround because of position relative in slot context
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
 }

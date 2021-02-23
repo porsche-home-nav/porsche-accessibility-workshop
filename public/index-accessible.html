@@ -43,19 +43,19 @@
                 <li>
                   <!-- A11y issue: Indicate the current item (https://www.w3.org/WAI/tutorials/menus/structure/#indicate-the-current-item) -->
                   <!-- A11y issue: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible (https://www.w3.org/WAI/WCAG21/quickref/#focus-visible) -->
-                  <a href="#" aria-current="page">Link 1</a>
+                  <a href="#" aria-current="page">Models</a>
                 </li>
                 <li>
-                  <a href="#">Link 2</a>
+                  <a href="#">Services</a>
                 </li>
                 <li>
-                  <a href="#">Link 3</a>
+                  <a href="#">Experiences</a>
                 </li>
                 <li>
-                  <a href="#">Link 4</a>
+                  <a href="#">Shop</a>
                 </li>
                 <li>
-                  <a href="#">Link 5</a>
+                  <a href="#">Company</a>
                 </li>
               </ul>
             </nav>
@@ -71,18 +71,19 @@
           <!-- A11y issue: Do not wrap link element around whole card component. Instead make use of the CSS pseudo-content trick (https://inclusive-components.design/cards/#thepseudocontenttrick)-->
           <p-content-wrapper class="ks-hero__text">
             <!-- A11y issue: HTML validation error: do not nest <button> inside link <a> -->
-            <!-- A11y issue: Text elements must have sufficient color contrast against the background (https://dequeuniversity.com/rules/axe/4.1/color-contrast) -->
             <!-- A11y issue: Page must contain a level-one heading (https://dequeuniversity.com/rules/axe/4.1/page-has-heading-one) -->
             <p-link-pure size="x-large" weight="thin" theme="dark">
-              <p-headline color="inherit" variant="inherit">
-                <!-- A11y improvement: Separate link target text from subline -->
-                <a href="#">Porsche Design System Kitchen Sink</a>
-              </p-headline>
-              <p name="subline">Lorem ipsum dolor sit amet consecutor.</p>
+              <a href="#">
+                <p-headline color="inherit" variant="inherit">
+                  Soul, electrified.
+                </p-headline>
+                <p name="subline">The new Taycan.</p>
+              </a>
             </p-link-pure>
           </p-content-wrapper>
           <div class="ks-hero__mood">
             <!-- A11y issue: Images must have alternate text (https://dequeuniversity.com/rules/axe/4.1/image-alt) -->
+            <!-- A11y issue: Text elements must have sufficient color contrast against the background (provide an bg color in case the image is not loaded) (https://dequeuniversity.com/rules/axe/4.1/color-contrast) -->
             <img
               src="./assets/ks-hero-01.webp"
               alt="Porsche Taican in an urban environment"
@@ -91,8 +92,8 @@
         </p-content-wrapper>
       </section>
       <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
-      <section class="ks-cards">
-        <p-content-wrapper class="-spacing-mt-48">
+      <section class="ks-cards -spacing-mt-72">
+        <p-content-wrapper>
           <!-- A11y issue: Add more HTML semantic with elements or aria roles (https://developer.mozilla.org/en-US/docs/Web/HTML/Element) -->
           <p-grid role="list">
             <p-grid-item size="{ base: 12, m: 4 }" role="listitem">
@@ -157,7 +158,6 @@
                   variant="headline-4"
                   tag="h2"
                   class="ks-cards__headline"
-                  style="color: #000"
                 >
                   Lorem ipsum
                 </p-headline>
@@ -180,39 +180,7 @@
           </p-grid>
         </p-content-wrapper>
       </section>
-      <section class="ks-carousel">
-        <p-content-wrapper class="-spacing-mt-48">
-          <div class="splide">
-            <div class="splide__arrows">
-              <p-button
-                hide-label="true"
-                icon="arrow-head-left"
-                class="splide__arrow splide__arrow--prev"
-              >
-                Prev
-              </p-button>
-              <p-button
-                hide-label="true"
-                icon="arrow-head-right"
-                class="splide__arrow splide__arrow--next"
-              >
-                Next
-              </p-button>
-            </div>
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide">Slide 01</li>
-                <li class="splide__slide">Slide 02</li>
-                <li class="splide__slide">Slide 03</li>
-                <li class="splide__slide">Slide 04</li>
-                <li class="splide__slide">Slide 05</li>
-                <li class="splide__slide">Slide 06</li>
-              </ul>
-            </div>
-          </div>
-        </p-content-wrapper>
-      </section>
-      <section class="ks-text-content">
+      <section class="ks-text-content -spacing-mt-72">
         <p-content-wrapper>
           <p-grid>
             <p-grid-item size="{ base: 12, m: 5 }">
@@ -265,10 +233,122 @@
           <p-button class="-spacing-mt-32">Click here!</p-button>
         </p-content-wrapper>
       </section>
-      <section class="ks-contact">
-        <p-content-wrapper class="-spacing-mt-48">
+      <section class="ks-carousel -spacing-mt-72">
+        <p-content-wrapper>
+          <div class="splide">
+            <div class="splide__arrows">
+              <p-button-pure
+                hide-label="true"
+                size="x-large"
+                icon="arrow-head-left"
+                class="splide__arrow splide__arrow--prev"
+              >
+                Prev
+              </p-button-pure>
+              <p-button-pure
+                hide-label="true"
+                size="x-large"
+                icon="arrow-head-right"
+                class="splide__arrow splide__arrow--next"
+              >
+                Next
+              </p-button-pure>
+            </div>
+            <div class="splide__track">
+              <p-grid role="list" class="splide__list">
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <img
+                    src="./assets/Cayenne.jpg"
+                    alt="Porsche Cayenne"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">Cayenne Models</a>
+                  </p-link>
+                </p-grid-item>
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <img
+                    src="./assets/Macan.jpg"
+                    alt="Porsche Macan"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">Macan Models</a>
+                  </p-link>
+                </p-grid-item>
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <img
+                    src="./assets/Panamera.jpg"
+                    alt="Porsche Panamera"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">Panamera Models</a>
+                  </p-link>
+                </p-grid-item>
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <img
+                    src="./assets/Taycan.jpg"
+                    alt="Porsche Taycan"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">Taycan Models</a>
+                  </p-link>
+                </p-grid-item>
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <img
+                    src="./assets/718.jpg"
+                    alt="Porsche 718 Cayman"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">718 Models</a>
+                  </p-link>
+                </p-grid-item>
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <img
+                    src="./assets/911.jpg"
+                    alt="Porsche 911 Carrera"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">911 Models</a>
+                  </p-link>
+                </p-grid-item>
+              </p-grid>
+            </div>
+          </div>
+        </p-content-wrapper>
+      </section>
+      <section class="ks-contact -spacing-mt-72">
+        <p-content-wrapper>
           <p-grid class="-spacing-mt-48">
-            <p-grid-item size="{ base: 12, m: 8 }">
+            <p-grid-item size="{ base: 12, m: 6 }">
               <form novalidate action="#">
                 <!-- A11y issue: Heading levels should only increase by one (https://dequeuniversity.com/rules/axe/4.1/heading-order) -->
                 <p-headline variant="headline-3" tag="h2">
@@ -383,11 +463,17 @@
                 >
                   <p-flex-item class="ks-form__grid-item">
                     <p-checkbox-wrapper>
-                      <span slot="label">
+                      <!-- A11y issue: input element must have an accessible name (https://dequeuniversity.com/rules/axe/4.1/select-name) -->
+                      <span slot="label" id="privacy-label">
                         I have read and understood the
                         <a href="#" target="_blank">Privacy Policy</a>
                       </span>
-                      <input name="privacy" type="checkbox" required />
+                      <input
+                        name="privacy"
+                        type="checkbox"
+                        aria-labelledby="privacy-label"
+                        required
+                      />
                     </p-checkbox-wrapper>
                   </p-flex-item>
                 </p-flex>
@@ -487,7 +573,18 @@
     </footer>
 
     <script>
-      new Splide(".splide").mount();
+      new Splide(".splide", {
+        perPage: 3,
+        perMove: 3,
+        breakpoints: {
+          1000: {
+            perPage: 1,
+            perMove: 1,
+          },
+        },
+        keyboard: true,
+        slideFocus: false,
+      }).mount();
     </script>
   </body>
 </html>

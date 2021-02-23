@@ -3,18 +3,25 @@
   position: relative;
 
   &__mood {
+    padding-top: 38.4375%;
+    overflow: hidden;
+    position: relative;
+
     img {
+      position: absolute;
+      top: 0;
       display: block;
       width: 100%;
       height: auto;
       opacity: 0.7;
+      object-fit: contain;
     }
   }
 
   &__text {
     position: absolute;
     bottom: 10%;
-    z-index: 1;
+    z-index: 2;
   }
 }
 
@@ -23,6 +30,8 @@
     transform: translate3d(0, 0, 0); // add new context for fixed
 
     &__mood {
+      background-color: $p-color-theme-dark-background-surface;
+
       img {
         opacity: 1;
       }
@@ -30,6 +39,7 @@
       &::before {
         content: "";
         position: absolute;
+        z-index: 1;
         top: 0;
         right: 0;
         bottom: 0;
