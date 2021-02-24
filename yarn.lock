@@ -7,10 +7,10 @@
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/assets/-/@porsche-design-system/assets-3.1.0.tgz#506a2f3549e0ba669b23e65360c0895256210067"
   integrity sha1-UGovNUngumabI+ZTYMCJUlYhAGc=
 
-"@porsche-design-system/components-js@2.0.0-rc.1":
-  version "2.0.0-rc.1"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.0.0-rc.1.tgz#0c6c280c1f7bd9273955580c2ddf6d73f5f3954f"
-  integrity sha1-DGwoDB972Sc5VVgMLd9tc/XzlU8=
+"@porsche-design-system/components-js@2.0.0-rc.3":
+  version "2.0.0-rc.3"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.0.0-rc.3.tgz#8b7196f9a7aaac5fa040a101099a8e1df9aa2364"
+  integrity sha1-i3GW+aeqrF+gQKEBCZqOHfmqI2Q=
 
 "@porsche-design-system/utilities@^4.0.0":
   version "4.0.0"
@@ -31,10 +31,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@types/node@^14.14.25":
-  version "14.14.25"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.25.tgz#15967a7b577ff81383f9b888aa6705d43fbbae93"
-  integrity sha512-EPpXLOVqDvisVxtlbvzfyqSsFeQxltFbluZNRndIb8tr9KiBnYNLzrc1N3pyKUCww2RNrfHDViqDWWE1LCJQtQ==
+"@types/node@^14.14.31":
+  version "14.14.31"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.31.tgz#72286bd33d137aa0d152d47ec7c1762563d34055"
+  integrity sha512-vFHy/ezP5qI0rFgJ7aQnjDXwAMrG0KqqIH7tQG5PPv3BWBayOPIQNBjVc/P6hhdZfMx51REc6tfDNXHUio893g==
 
 "@zeit/schemas@2.6.0":
   version "2.6.0"
@@ -2240,10 +2240,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^4.1.3:
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.3.tgz#519d582bd94cba0cf8934c7d8e8467e473f53bb7"
-  integrity sha512-B3ZIOf1IKeH2ixgHhj6la6xdwR9QrLC5d1VKeCSY4tvkqhF2eqd9O7txNlS0PO3GrBAFIdr3L1ndNwteUbZLYg==
+typescript@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.2.tgz#1450f020618f872db0ea17317d16d8da8ddb8c4c"
+  integrity sha512-tbb+NVrLfnsJy3M59lsDgrzWIflR4d4TIUjz+heUnHZwdF7YsrMTKoRERiIvI2lvBG95dfpLxB21WZhys1bgaQ==
 
 undefsafe@^2.0.3:
   version "2.0.3"
