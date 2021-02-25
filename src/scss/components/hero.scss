@@ -32,6 +32,13 @@
     &__mood {
       background-color: $p-color-theme-dark-background-surface;
 
+      figcaption {
+        position: absolute;
+        z-index: 2;
+        right: $p-spacing-32;
+        bottom: 5%;
+      }
+
       img {
         opacity: 1;
       }

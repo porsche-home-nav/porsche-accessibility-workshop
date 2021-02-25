@@ -10,7 +10,12 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!--PLACEHOLDER_PORSCHE_DESIGN_SYSTEM_INITIAL_STYLES-->
     <link rel="stylesheet" href="./style/styles.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide-core.min.css"
+    />
     <script src="node_modules/@porsche-design-system/components-js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   </head>
   <body>
     <script type="text/javascript">
@@ -41,8 +46,8 @@
         <a href="#">
           <p-content-wrapper class="ks-hero__text">
             <p-button-pure size="x-large" weight="thin" theme="dark">
-              Soul, electrified.
-              <p name="subline">The new Taycan</p>
+              Carpe secundum.
+              <p slot="subline">The new 911 GT3</p>
             </p-button-pure>
           </p-content-wrapper>
           <div class="ks-hero__mood">
@@ -61,7 +66,12 @@
                 class="ks-cards__mood"
                 alt="Porsche"
               />
-              <p-text size="medium" color="inherit" class="ks-cards__headline">
+              <p-text
+                weight="thin"
+                size="medium"
+                color="inherit"
+                class="ks-cards__headline"
+              >
                 Protection Plan
               </p-text>
               <p-text class="ks-cards__desc">
@@ -81,6 +91,7 @@
               />
               <div class="ks-cards__desc-container">
                 <p-text
+                  weight="thin"
                   size="medium"
                   color="inherit"
                   class="ks-cards__headline"
@@ -107,6 +118,7 @@
               />
               <div class="ks-cards__desc-container">
                 <p-text
+                  weight="thin"
                   size="medium"
                   color="inherit"
                   class="ks-cards__headline"
@@ -154,9 +166,88 @@
     </div>
     <div class="ks-carousel -spacing-mt-72">
       <p-content-wrapper>
-        <div>your content</div>
-        <div>your content</div>
-        <div>your content</div>
+        <div class="splide">
+          <div class="splide__arrows">
+            <p-button-pure
+              hide-label="true"
+              size="x-large"
+              icon="arrow-head-left"
+              class="splide__arrow splide__arrow--prev"
+            >
+            </p-button-pure>
+            <p-button-pure
+              hide-label="true"
+              size="x-large"
+              icon="arrow-head-right"
+              class="splide__arrow splide__arrow--next"
+            >
+            </p-button-pure>
+          </div>
+          <div class="splide__track">
+            <p-grid class="splide__list">
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/Cayenne.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">Cayenne Models</a>
+                </p-link>
+              </p-grid-item>
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/Macan.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">Macan Models</a>
+                </p-link>
+              </p-grid-item>
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/Panamera.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">Panamera Models</a>
+                </p-link>
+              </p-grid-item>
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/Taycan.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">Taycan Models</a>
+                </p-link>
+              </p-grid-item>
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/718.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">718 Models</a>
+                </p-link>
+              </p-grid-item>
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/911.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">911 Models</a>
+                </p-link>
+              </p-grid-item>
+            </p-grid>
+          </div>
+        </div>
       </p-content-wrapper>
     </div>
     <div class="ks-contact -spacing-mt-72">
@@ -346,5 +437,21 @@
         </p-content-wrapper>
       </p-content-wrapper>
     </div>
+
+    <script>
+      new Splide(".splide", {
+        perPage: 3,
+        perMove: 3,
+        breakpoints: {
+          1000: {
+            perPage: 1,
+            perMove: 1,
+          },
+        },
+        accessibility: false,
+        keyboard: false,
+        slideFocus: false,
+      }).mount();
+    </script>
   </body>
 </html>

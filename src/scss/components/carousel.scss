@@ -44,9 +44,6 @@
     &__slide {
       padding-bottom: $p-spacing-8;
       text-align: center;
-      &:focus {
-        outline: 2px solid red;
-      }
     }
 
     &__pagination {
@@ -54,6 +51,9 @@
       width: 100%;
       margin-top: $p-spacing-32;
       margin-bottom: $p-spacing-32;
+      li {
+        padding: $p-spacing-4;
+      }
 
       &__page {
         display: block;
@@ -80,9 +80,6 @@
       }
 
       &__pagination {
-        li {
-          padding: $p-spacing-4;
-        }
         &__page {
           cursor: pointer;
 
