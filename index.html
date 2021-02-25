@@ -79,7 +79,7 @@
                 vehicle looking its best. These optional protection plans
                 provide peace of mind allowing you to simply enjoy the drive.
               </p-text>
-              <p-button>Click here!</p-button>
+              <p-button variant="tertiary">Click here!</p-button>
             </a>
           </p-grid-item>
           <p-grid-item size="4">
@@ -105,7 +105,7 @@
                   you can link your account after registering your vehicle in My
                   Porsche.
                 </p-text>
-                <p-button>Click here!</p-button>
+                <p-button variant="tertiary">Click here!</p-button>
               </div>
             </a>
           </p-grid-item>
@@ -131,7 +131,7 @@
                   Zubehör Lösungen: Das vielfältige Produktprogramm finden Sie
                   in unserem Porsche.
                 </p-text>
-                <p-button>Click here!</p-button>
+                <p-button variant="tertiary">Click here!</p-button>
               </div>
             </a>
           </p-grid-item>
@@ -168,20 +168,12 @@
       <p-content-wrapper>
         <div class="splide">
           <div class="splide__arrows">
-            <p-button-pure
-              hide-label="true"
-              size="x-large"
-              icon="arrow-head-left"
-              class="splide__arrow splide__arrow--prev"
-            >
-            </p-button-pure>
-            <p-button-pure
-              hide-label="true"
-              size="x-large"
-              icon="arrow-head-right"
-              class="splide__arrow splide__arrow--next"
-            >
-            </p-button-pure>
+            <div class="splide__arrow splide__arrow--prev">
+              <p-icon name="arrow-head-left" size="large"></p-icon>
+            </div>
+            <div class="splide__arrow splide__arrow--next">
+              <p-icon name="arrow-head-right" size="large"></p-icon>
+            </div>
           </div>
           <div class="splide__track">
             <p-grid class="splide__list">
@@ -338,7 +330,7 @@
                 label="Email address"
                 class="ks-form__row-spacing"
               >
-                <input name="email" type="email" required />
+                <input name="email" type="text" required />
               </p-text-field-wrapper>
               <p-text-field-wrapper
                 label="Phone number"
@@ -370,6 +362,7 @@
                   <p-button
                     type="submit"
                     class="ks-form__item-width--full ks-form__item-width--auto-s"
+                    id="ks-submit-btn"
                   >
                     OK
                   </p-button>
@@ -453,5 +446,6 @@
         slideFocus: false,
       }).mount();
     </script>
+    <script src="./js/validation.js"></script>
   </body>
 </html>
