@@ -26,15 +26,23 @@
       ],
       "extensions": "scss",
       "runOnChangeOnly": true
+    },
+    "build:js": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js",
+      "runOnChangeOnly": true
     }
   },
   "scripts": {
     "start": "yarn build && serve ./build",
     "start:watch": "npm-watch & yarn start",
-    "build": "yarn clean && yarn build:index && yarn build:css && yarn build:assets && yarn build:node_modules",
+    "build": "yarn clean && yarn build:index && yarn build:css && yarn build:assets && yarn build:js && yarn build:node_modules",
     "build:index": "mkdir -p build/node_modules && cp -a ./public/. ./build",
     "build:css": "ts-node --project 'tsconfig.node.json' './scripts/build-css.ts'",
     "build:assets": "cd ./src/ && cp -R './assets' ../build",
+    "build:js": "cd ./src/ && cp -R './js' ../build",
     "build:node_modules": "cp -R ./node_modules/@porsche-design-system ./build/node_modules",
     "build:clean-folders": "find ./build -maxdepth 5 -type d -name .bin -exec rm -rf {} \\;",
     "postbuild:index": "yarn replace:intitialStyles",

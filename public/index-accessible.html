@@ -107,8 +107,10 @@
       <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
       <section class="ks-cards -spacing-mt-72">
         <p-content-wrapper>
+          <!-- A11y improvement: Every Section should start with a headline -->
+          <p-headline variant="headline-2">Offer list</p-headline>
           <!-- A11y issue: Add more HTML semantic with elements or aria roles (https://developer.mozilla.org/en-US/docs/Web/HTML/Element) -->
-          <p-grid role="list">
+          <p-grid role="list" class="-spacing-mt-32">
             <p-grid-item size="{ base: 12, m: 4 }" role="listitem">
               <!-- A11y issue: Do not wrap link element around whole card component. Instead make use of the CSS pseudo-content trick (https://inclusive-components.design/cards/#thepseudocontenttrick)-->
               <div class="ks-cards__item">
@@ -251,8 +253,12 @@
       <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
       <section class="ks-carousel -spacing-mt-72">
         <p-content-wrapper>
-          <div class="splide">
+          <!-- A11y improvement: Every Section should start with a headline -->
+          <p-headline variant="headline-2">Models</p-headline>
+          <div class="splide -spacing-mt-32">
             <div class="splide__arrows">
+              <!-- A11y issue: use semantic action elements which have focus and behave like it is intended -->
+              <!-- "If it looks like a button and acts like a button make it a <button>" -->
               <p-button-pure
                 hide-label="true"
                 size="x-large"
@@ -468,7 +474,8 @@
                     label="Email address"
                     class="ks-form__row-spacing"
                   >
-                    <input name="mail" type="email" required />
+                    <!-- A11y improvement: add corresponding input type -->
+                    <input name="email" type="email" required />
                   </p-text-field-wrapper>
                   <p-text-field-wrapper
                     label="Phone number"
@@ -509,6 +516,7 @@
                     <p-button
                       type="submit"
                       class="ks-form__item-width--full ks-form__item-width--auto-s"
+                      id="ks-submit-btn"
                     >
                       Send form
                     </p-button>
@@ -606,5 +614,6 @@
         slideFocus: false,
       }).mount();
     </script>
+    <script src="./js/validation.js"></script>
   </body>
 </html>

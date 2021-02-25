@@ -35,6 +35,12 @@
     color: $p-color-state-disabled;
   }
 
+  &__desc-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
   &__desc {
     margin-bottom: $p-spacing-32;
   }
