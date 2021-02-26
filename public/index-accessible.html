@@ -78,11 +78,11 @@
                 <!-- A11y improvement: add more contextual sense with aria-label -->
                 <a
                   href="#"
-                  aria-label="Get more information about the new 911 GT3"
+                  aria-label="Get more information about the new 911 Carrera GTS"
                 >
-                  Carpe secundum.
+                  Moments of Excitement
                 </a>
-                <span slot="subline">The new 911 GT3</span>
+                <span slot="subline">Discover the Porsche Ice Experience.</span>
               </p-link-pure>
             </p-headline>
           </p-content-wrapper>
@@ -91,8 +91,8 @@
             <!-- A11y issue: Images must have alternate text (https://dequeuniversity.com/rules/axe/4.1/image-alt) -->
             <!-- A11y issue: Text elements must have sufficient color contrast against the background (provide an bg color in case the image is not loaded) (https://dequeuniversity.com/rules/axe/4.1/color-contrast) -->
             <img
-              src="./assets/ks-hero-01.jpg"
-              alt="Porsche 911 GT3 on race track"
+              src="./assets/porsche-911-winter-road-1.jpg"
+              alt="Porsche 911 Carrera 4 GTS races on a snow-covered road"
             />
             <!-- A11y issue: provide text alternatives -->
             <figcaption>
@@ -247,7 +247,36 @@
               </p-text>
             </p-grid-item>
           </p-grid>
-          <p-button class="-spacing-mt-32">Click here!</p-button>
+          <p-grid>
+            <p-grid-item size="{ base: 12, m: 8 }">
+              <p-button class="-spacing-mt-32">Click here!</p-button>
+              <!-- A11y issue: make footnotes accessible (https://www.sitepoint.com/accessible-footnotes-css/) -->
+              <p-text
+                id="ks-footnote-label-1"
+                size="x-small"
+                color="neutral-contrast-medium"
+                class="-spacing-mt-32"
+              >
+                <sup>1</sup> Data determined in accordance with the measurement
+                method required by law. Since 1 September 2017 certain new cars
+                have been type approved in accordance with the Worldwide
+                Harmonised Light Vehicles Test Procedure (WLTP), a more
+                realistic test procedure to measure fuel/electricity consumption
+                and CO₂ emissions.
+              </p-text>
+              <p-text
+                id="ks-footnote-label-2"
+                size="x-small"
+                color="neutral-contrast-medium"
+                class="-spacing-mt-16"
+              >
+                <sup>2</sup> Due to the more realistic test conditions, the
+                fuel/electricity consumption and CO₂ emission values determined
+                in accordance with the WLTP will, in many cases, be higher than
+                those determined in accordance with the NEDC.
+              </p-text>
+            </p-grid-item>
+          </p-grid>
         </p-content-wrapper>
       </section>
       <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
@@ -546,54 +575,16 @@
     <footer class="ks-footer">
       <p-content-wrapper width="extended">
         <p-content-wrapper>
-          <p-grid>
-            <p-grid-item size="3">
-              <!-- A11y issue: Heading levels should only increase by one (https://dequeuniversity.com/rules/axe/4.1/heading-order) -->
-              <p-headline variant="headline-4" tag="h2" theme="dark">
-                Lorem ipsum
-              </p-headline>
-            </p-grid-item>
-          </p-grid>
+          <!-- A11y issue: Heading levels should only increase by one (https://dequeuniversity.com/rules/axe/4.1/heading-order) -->
+          <p-headline variant="headline-4" tag="h2" theme="dark">
+            Lorem ipsum
+          </p-headline>
           <div class="ks-footer__meta">
             <!-- A11y issue: Text elements must have sufficient color contrast against the background (https://dequeuniversity.com/rules/axe/4.1/color-contrast) -->
             <p-text theme="dark" size="x-small" class="-spacing-mt-24">
               © 2020 Porsche Inter Auto CZ spol. s r.o - Testing Extra Long
               Copyright Text Home Page link Testing special characters
               originální příslušenstvíCookie Policy. Contact Us via E-mail.
-            </p-text>
-            <!-- A11y issue: make footnotes accessible (https://www.sitepoint.com/accessible-footnotes-css/) -->
-            <p-text
-              id="ks-footnote-label-1"
-              theme="dark"
-              class="-spacing-mt-16"
-            >
-              <sup>1</sup> Data determined in accordance with the measurement
-              method required by law. Since 1 September 2017 certain new cars
-              have been type approved in accordance with the Worldwide
-              Harmonised Light Vehicles Test Procedure (WLTP), a more realistic
-              test procedure to measure fuel/electricity consumption and CO₂
-              emissions. As of 1 September 2018 the WLTP replaced the New
-              European Driving Cycle (NEDC). Due to the more realistic test
-              conditions, the fuel/electricity consumption and CO₂ emission
-              values determined in accordance with the WLTP will, in many cases,
-              be higher than those determined in accordance with the NEDC. This
-              may lead to corresponding changes in vehicle taxation from 1
-              September 2018. You can find more information on the difference
-              between WLTP and NEDC at www.porsche.com/wltp.
-            </p-text>
-            <!-- A11y issue: make footnotes accessible (https://www.sitepoint.com/accessible-footnotes-css/) -->
-            <p-text
-              id="ks-footnote-label-2"
-              theme="dark"
-              class="-spacing-mt-16"
-            >
-              <sup>2</sup> Due to the more realistic test conditions, the
-              fuel/electricity consumption and CO₂ emission values determined in
-              accordance with the WLTP will, in many cases, be higher than those
-              determined in accordance with the NEDC. This may lead to
-              corresponding changes in vehicle taxation from 1 September 2018.
-              You can find more information on the difference between WLTP and
-              NEDC at www.porsche.com/wltp.
             </p-text>
           </div>
         </p-content-wrapper>

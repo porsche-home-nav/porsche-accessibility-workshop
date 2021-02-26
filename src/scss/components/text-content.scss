@@ -2,4 +2,8 @@
 .ks-text-content {
   padding: #{$p-spacing-48} 0;
   background-color: $p-color-background-surface;
+
+  &__footnote {
+    color: $p-color-state-disabled;
+  }
 }
