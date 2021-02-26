@@ -33,7 +33,7 @@ const validate = (e) => {
     if (el.name === "subject" && el.value === "") {
       setAttributes(el.parentElement, {
         state: "error",
-        message: "Please enter a subject",
+        message: accessible ? "Please enter a subject" : "Input is wrong",
       });
       return false;
     } else {
@@ -44,7 +44,7 @@ const validate = (e) => {
     if (el.name === "message" && el.value === "") {
       setAttributes(el.parentElement, {
         state: "error",
-        message: "Please enter a message",
+        message: accessible ? "Please enter a message" : "Undefined",
       });
       return false;
     } else {
@@ -55,7 +55,7 @@ const validate = (e) => {
     if (el.name === "salutation" && el.value === "") {
       setAttributes(el.parentElement, {
         state: "error",
-        message: "Please choose a salutation",
+        message: accessible ? "Please choose a salutation" : "Nothing chosen",
       });
       return false;
     } else {
@@ -66,7 +66,7 @@ const validate = (e) => {
     if (el.name === "name" && el.value === "") {
       setAttributes(el.parentElement, {
         state: "error",
-        message: "Please enter your first name",
+        message: accessible ? "Please enter your first name" : "Name missing",
       });
       return false;
     } else {
@@ -77,7 +77,7 @@ const validate = (e) => {
     if (el.name === "surname" && el.value === "") {
       setAttributes(el.parentElement, {
         state: "error",
-        message: "Please enter your last name",
+        message: accessible ? "Please enter your last name" : "Name missing",
       });
       return false;
     } else {
@@ -88,7 +88,7 @@ const validate = (e) => {
     if (el.name === "email" && (el.value === "" || !el.value.includes("@"))) {
       setAttributes(el.parentElement, {
         state: "error",
-        message: "Please enter a valid email address",
+        message: accessible ? "Please enter a valid email address" : "",
       });
       return false;
     } else {
@@ -99,7 +99,9 @@ const validate = (e) => {
     if (el.name === "privacy" && !el.checked) {
       setAttributes(el.parentElement, {
         state: "error",
-        message: "Please read and accept the privacy policy",
+        message: accessible
+          ? "Please read and accept the privacy policy"
+          : "Nothing accepted",
       });
       return false;
     } else {
