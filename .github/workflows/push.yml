@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - master
-      - feature/*
+      - workshop/*
       - housekeeping/*
       - issue/*
       - dependabot/**
