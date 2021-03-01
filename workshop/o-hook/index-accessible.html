@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<!-- A11y issue: <html> element must have a lang attribute (https://dequeuniversity.com/rules/axe/4.1/html-has-lang) -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- A11y issue: Documents must contain a descriptive title element to aid in navigation (https://dequeuniversity.com/rules/axe/4.1/document-title) -->
+    <title>Porsche Accessibility Workshop - Result Page</title>
+    <!-- A11y issue: Zooming and scaling must not be disabled (https://dequeuniversity.com/rules/axe/4.1/meta-viewport) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--PLACEHOLDER_PORSCHE_DESIGN_SYSTEM_INITIAL_STYLES--><style>p-banner,p-button,p-button-pure,p-checkbox-wrapper,p-content-wrapper,p-divider,p-fieldset-wrapper,p-flex,p-flex-item,p-grid,p-grid-item,p-headline,p-icon,p-link,p-link-pure,p-link-social,p-marque,p-modal,p-pagination,p-radio-button-wrapper,p-select-wrapper,p-spinner,p-tabs,p-tabs-bar,p-tabs-item,p-text,p-text-field-wrapper,p-text-list,p-text-list-item,p-textarea-wrapper{visibility:hidden}</style>
+    <link rel="stylesheet" href="./style/styles.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide-core.min.css"
+    />
+    <script src="node_modules/@porsche-design-system/components-js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  </head>
+  <body class="ks-accessible">
+    <script type="text/javascript">
+      porscheDesignSystem.load();
+    </script>
+    <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
+    <header class="ks-header">
+      <!-- A11y issue: The skip-link target should exist and be focusable (https://dequeuniversity.com/rules/axe/4.1/skip-link) -->
+      <a href="#ks-main-content" class="ks-skip-link">
+        <p-link>Skip to Content</p-link>
+      </a>
+      <p-content-wrapper>
+        <p-flex align-items="flex-end">
+          <p-flex-item>
+            <!-- A11y issue: Links must have discernible text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
+            <a href="#" class="ks-header__marque" aria-label="To homepage">
+              <p-marque></p-marque>
+            </a>
+          </p-flex-item>
+          <p-flex-item>
+            <!-- A11y issue: Add more HTML semantic (https://www.w3.org/WAI/tutorials/menus/structure/#identify-menus) -->
+            <nav class="ks-header__nav">
+              <!-- A11y issue: Use HTML structuring elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#text_content) -->
+              <ul>
+                <li>
+                  <!-- A11y issue: Indicate the current item (https://www.w3.org/WAI/tutorials/menus/structure/#indicate-the-current-item) -->
+                  <!-- A11y issue: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible (https://www.w3.org/WAI/WCAG21/quickref/#focus-visible) -->
+                  <a href="#" aria-current="page">Models</a>
+                </li>
+                <li>
+                  <!-- A11y improvement: larger click-area -->
+                  <a href="#">Services</a>
+                </li>
+                <li>
+                  <a href="#">Experiences</a>
+                </li>
+                <li>
+                  <a href="#">Shop</a>
+                </li>
+                <li>
+                  <a href="#">Company</a>
+                </li>
+              </ul>
+            </nav>
+          </p-flex-item>
+        </p-flex>
+      </p-content-wrapper>
+    </header>
+    <!-- A11y issue: Ensures the document has at most one main landmark (https://dequeuniversity.com/rules/axe/4.1/landmark-no-duplicate-main) -->
+    <main id="ks-main-content">
+      <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
+      <section class="ks-hero">
+        <p-content-wrapper width="extended">
+          <!-- A11y issue: Do not wrap link element around whole card component. Instead make use of the CSS pseudo-content trick (https://inclusive-components.design/cards/#thepseudocontenttrick)-->
+          <p-content-wrapper class="ks-hero__text">
+            <!-- A11y issue: Page must contain a level-one heading (https://dequeuniversity.com/rules/axe/4.1/page-has-heading-one) -->
+            <p-headline color="inherit" variant="inherit">
+              <!-- A11y issue: HTML validation error: do not nest <button> inside link <a> -->
+              <p-link-pure size="x-large" weight="bold" theme="dark">
+                <!-- A11y improvement: add more contextual sense with aria-label -->
+                <a
+                  href="#"
+                  aria-label="Moments of Excitement - Get more information about the new 911 Carrera 4 GTS"
+                >
+                  Moments of Excitement
+                </a>
+                <span slot="subline">Discover the Porsche Ice Experience.</span>
+              </p-link-pure>
+            </p-headline>
+          </p-content-wrapper>
+          <!-- A11y improvement: add more semantic -->
+          <figure class="ks-hero__mood">
+            <!-- A11y issue: Images must have alternate text (https://dequeuniversity.com/rules/axe/4.1/image-alt) -->
+            <!-- A11y issue: Text elements must have sufficient color contrast against the background (provide an bg color in case the image is not loaded) (https://dequeuniversity.com/rules/axe/4.1/color-contrast) -->
+            <img
+              src="./assets/porsche-911-winter-road-1.jpg"
+              alt="Porsche 911 Carrera 4 GTS races on a snow-covered road"
+            />
+            <!-- A11y issue: provide text alternatives -->
+            <figcaption>
+              <p-text theme="dark" size="x-small">
+                Kraftstoffverbrauch kombiniert:13,3 - 12,4 liter/100km<br />
+                CO2-Emmissionen kombiniert:304 - 283 g/km
+              </p-text>
+            </figcaption>
+          </figure>
+        </p-content-wrapper>
+      </section>
+      <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
+      <section class="ks-cards -spacing-mt-72">
+        <p-content-wrapper>
+          <!-- A11y improvement: Every Section should start with a headline -->
+          <p-headline variant="headline-2">Offer list</p-headline>
+          <!-- A11y issue: Add more HTML semantic with elements or aria roles (https://developer.mozilla.org/en-US/docs/Web/HTML/Element) -->
+          <p-grid role="list" class="-spacing-mt-32">
+            <p-grid-item size="{ base: 12, m: 4 }" role="listitem">
+              <!-- A11y issue: Do not wrap link element around whole card component. Instead make use of the CSS pseudo-content trick (https://inclusive-components.design/cards/#thepseudocontenttrick)-->
+              <div class="ks-cards__item">
+                <!-- A11y improvement: Ordering/Structuring you contents while keeping layout (https://adrianroselli.com/2020/02/block-links-cards-clickable-regions-etc.html#Order) -->
+                <!-- A11y issue: Text elements must have sufficient color contrast against the background (https://dequeuniversity.com/rules/axe/4.1/color-contrast) -->
+                <!-- A11y issue: Bold, italic text and font-size are not used to style <p> elements as a heading (https://dequeuniversity.com/rules/axe/4.1/p-as-heading) -->
+                <p-headline
+                  variant="headline-4"
+                  tag="h2"
+                  class="ks-cards__headline"
+                >
+                  Protection Plan
+                </p-headline>
+                <!-- A11y issue: Images must have alternate text (https://dequeuniversity.com/rules/axe/4.1/image-alt) -->
+                <img
+                  src="./assets/ks-offer-teaser-1.jpg"
+                  class="ks-cards__mood"
+                  alt="Porsche Cayenne in red on the road"
+                />
+                <p-text class="ks-cards__desc">
+                  Protection Plan suite of optional products helps you keep your
+                  vehicle looking its best. These optional protection plans
+                  provide peace of mind allowing you to simply enjoy the drive.
+                </p-text>
+                <!-- A11y issue: Links must have discernible and descriptive text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
+                <p-link variant="tertiary">
+                  <a href="#">Order Protection Plan</a>
+                </p-link>
+              </div>
+            </p-grid-item>
+            <p-grid-item size="{ base: 12, m: 4 }" role="listitem">
+              <div class="ks-cards__item">
+                <p-headline
+                  variant="headline-4"
+                  tag="h2"
+                  class="ks-cards__headline"
+                >
+                  My Porsche
+                </p-headline>
+                <img
+                  src="./assets/ks-offer-teaser-2.jpg"
+                  class="ks-cards__mood"
+                  alt="Porsche Cayenne in beige on the road"
+                />
+                <p-text class="ks-cards__desc">
+                  Each moment spent behind the wheel is engineered to be a
+                  thrilling reminder of what driving should be. To help keep you
+                  in control of your Porsche Financial Services Canada account,
+                  you can link your account after registering your vehicle in My
+                  Porsche.
+                </p-text>
+                <p-link variant="tertiary">
+                  <a href="#">Get information of My Porsche</a>
+                </p-link>
+              </div>
+            </p-grid-item>
+            <p-grid-item size="{ base: 12, m: 4 }" role="listitem">
+              <div class="ks-cards__item">
+                <p-headline
+                  variant="headline-4"
+                  tag="h2"
+                  class="ks-cards__headline"
+                >
+                  Lorem ipsum
+                </p-headline>
+                <img
+                  src="./assets/ks-offer-teaser-3.jpg"
+                  class="ks-cards__mood"
+                  alt="Porsche Cayenne in black on the road"
+                />
+                <p-text class="ks-cards__desc">
+                  Tauchen Sie ein in die Welt von Porsche Tequipment. Von
+                  fahrzeugindividuellen Zubehör Produkten bis hin zu allgemeinen
+                  Zubehör Lösungen: Das vielfältige Produktprogramm finden Sie
+                  in unserem Porsche.
+                </p-text>
+                <p-link variant="tertiary">
+                  <a href="#">More information about XYZ</a>
+                </p-link>
+              </div>
+            </p-grid-item>
+          </p-grid>
+        </p-content-wrapper>
+      </section>
+      <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
+      <section class="ks-text-content -spacing-mt-72">
+        <p-content-wrapper>
+          <p-grid>
+            <p-grid-item size="{ base: 12, m: 5 }">
+              <!-- A11y issue: Heading levels should only increase by one (https://dequeuniversity.com/rules/axe/4.1/heading-order) -->
+              <p-headline variant="headline-3" tag="h2">
+                Lorem Headline 1
+              </p-headline>
+              <!-- A11y issue: Characters per line should be between 45 and 75 (https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/) -->
+              <p-text class="-spacing-mt-16">
+                Lorem ipsum dolor sit amet,
+                <!-- A11y issue: make footnotes accessible (https://www.sitepoint.com/accessible-footnotes-css/) -->
+                <a
+                  href="#ks-footnote-label-1"
+                  aria-describedby="ks-footnote-label-1"
+                  class="ks-footnote"
+                >
+                  consetetur sadipscing elitr
+                </a>
+                , sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                sed diam voluptua. At vero eos et accusam et justo duo dolores
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                est Lorem ipsum dolor sit amet.
+              </p-text>
+            </p-grid-item>
+            <p-grid-item size="{ base: 12, m: 5 }" offset="{ base: 0, m: 1 }">
+              <!-- A11y issue: Heading levels should only increase by one (https://dequeuniversity.com/rules/axe/4.1/heading-order) -->
+              <p-headline variant="headline-3" tag="h2">
+                Lorem Headline 2
+              </p-headline>
+              <p-text class="-spacing-mt-16">
+                sadipscing elitr, sed diam
+                <a
+                  href="#ks-footnote-label-2"
+                  aria-describedby="ks-footnote-label-2"
+                  class="ks-footnote"
+                >
+                  nonumy eirmod
+                </a>
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed
+                diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                Lorem ipsum dolor sit amet.
+              </p-text>
+            </p-grid-item>
+          </p-grid>
+          <p-grid>
+            <p-grid-item size="{ base: 12, m: 8 }">
+              <p-button class="-spacing-mt-32">Click here!</p-button>
+              <!-- A11y issue: make footnotes accessible (https://www.sitepoint.com/accessible-footnotes-css/) -->
+              <p-text
+                id="ks-footnote-label-1"
+                size="x-small"
+                color="neutral-contrast-medium"
+                class="-spacing-mt-32"
+              >
+                <sup>1</sup> Data determined in accordance with the measurement
+                method required by law. Since 1 September 2017 certain new cars
+                have been type approved in accordance with the Worldwide
+                Harmonised Light Vehicles Test Procedure (WLTP), a more
+                realistic test procedure to measure fuel/electricity consumption
+                and CO₂ emissions.
+              </p-text>
+              <p-text
+                id="ks-footnote-label-2"
+                size="x-small"
+                color="neutral-contrast-medium"
+                class="-spacing-mt-16"
+              >
+                <sup>2</sup> Due to the more realistic test conditions, the
+                fuel/electricity consumption and CO₂ emission values determined
+                in accordance with the WLTP will, in many cases, be higher than
+                those determined in accordance with the NEDC.
+              </p-text>
+            </p-grid-item>
+          </p-grid>
+        </p-content-wrapper>
+      </section>
+      <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
+      <section class="ks-carousel -spacing-mt-72">
+        <p-content-wrapper>
+          <!-- A11y improvement: Every Section should start with a headline -->
+          <p-headline variant="headline-2">Models</p-headline>
+          <div class="splide -spacing-mt-32">
+            <div class="splide__arrows">
+              <!-- A11y issue: use semantic action elements which have focus and behave like it is intended -->
+              <!-- "If it looks like a button and acts like a button make it a <button>" -->
+              <p-button-pure
+                hide-label="true"
+                size="x-large"
+                icon="arrow-head-left"
+                class="splide__arrow splide__arrow--prev"
+              >
+                <!-- A11y issue: Links/Buttons must have discernible and descriptive text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
+                Prev
+              </p-button-pure>
+              <p-button-pure
+                hide-label="true"
+                size="x-large"
+                icon="arrow-head-right"
+                class="splide__arrow splide__arrow--next"
+              >
+                <!-- A11y issue: Links/Buttons must have discernible and descriptive text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
+                Next
+              </p-button-pure>
+            </div>
+            <div class="splide__track">
+              <p-grid role="list" class="splide__list">
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <!-- A11y issue: Images must have alternate text (https://dequeuniversity.com/rules/axe/4.1/image-alt) -->
+                  <img
+                    src="./assets/Cayenne.jpg"
+                    alt="Porsche Cayenne in silver from the side"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">Cayenne Models</a>
+                  </p-link>
+                </p-grid-item>
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <img
+                    src="./assets/Macan.jpg"
+                    alt="Porsche Macan in silver from the side"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">Macan Models</a>
+                  </p-link>
+                </p-grid-item>
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <img
+                    src="./assets/Panamera.jpg"
+                    alt="Porsche Panamera in silver from the side"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">Panamera Models</a>
+                  </p-link>
+                </p-grid-item>
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <img
+                    src="./assets/Taycan.jpg"
+                    alt="Porsche Taycan in silver from the side"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">Taycan Models</a>
+                  </p-link>
+                </p-grid-item>
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <img
+                    src="./assets/718.jpg"
+                    alt="Porsche 718 Cayman in silver from the side"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">718 Models</a>
+                  </p-link>
+                </p-grid-item>
+                <p-grid-item
+                  size="{ base: 12, m: 4 }"
+                  role="listitem"
+                  class="splide__slide"
+                >
+                  <img
+                    src="./assets/911.jpg"
+                    alt="Porsche 911 Carrera in silver from the side"
+                    class="ks-carousel__mood"
+                  />
+                  <p-link variant="tertiary">
+                    <a href="#">911 Models</a>
+                  </p-link>
+                </p-grid-item>
+              </p-grid>
+            </div>
+          </div>
+        </p-content-wrapper>
+      </section>
+      <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
+      <section class="ks-contact -spacing-mt-72">
+        <p-content-wrapper>
+          <p-grid class="-spacing-mt-48">
+            <p-grid-item size="{ base: 12, m: 6 }">
+              <form novalidate action="#">
+                <!-- A11y issue: Heading levels should only increase by one (https://dequeuniversity.com/rules/axe/4.1/heading-order) -->
+                <p-headline variant="headline-3" tag="h2">
+                  Get in touch
+                </p-headline>
+                <!-- A11y issue: Grouping controls (https://www.w3.org/WAI/tutorials/forms/grouping/) -->
+                <p-fieldset-wrapper
+                  label="Some legend label"
+                  class="ks-form__section-spacing"
+                >
+                  <p-flex class="ks-form__grid-item-container">
+                    <p-flex-item
+                      width="{base: 'full', m: 'half'}"
+                      class="ks-form__grid-item"
+                    >
+                      <!-- A11y issue: select element must have an accessible name (https://dequeuniversity.com/rules/axe/4.1/select-name) -->
+                      <p-select-wrapper label="Category">
+                        <select name="category" required>
+                          <option value hidden></option>
+                          <option value="1">Option 1</option>
+                          <option value="2">Option 2</option>
+                          <option value="3">Option 3</option>
+                        </select>
+                      </p-select-wrapper>
+                    </p-flex-item>
+                  </p-flex>
+                  <p-text-field-wrapper
+                    label="Subject"
+                    class="ks-form__row-spacing"
+                  >
+                    <input name="subject" type="text" required />
+                  </p-text-field-wrapper>
+                  <p-textarea-wrapper
+                    label="Your message"
+                    class="ks-form__row-spacing"
+                  >
+                    <textarea name="message" required></textarea>
+                  </p-textarea-wrapper>
+                </p-fieldset-wrapper>
+                <!-- A11y issue: Grouping controls (https://www.w3.org/WAI/tutorials/forms/grouping/) -->
+                <p-fieldset-wrapper
+                  label="Personal Data"
+                  class="ks-form__section-spacing"
+                >
+                  <p-flex
+                    direction="{ base: 'column', m: 'row' }"
+                    class="ks-form__grid-item-container ks-form__row-spacing"
+                  >
+                    <p-flex-item
+                      width="{base: 'full', m: 'one-third'}"
+                      class="ks-form__grid-item"
+                    >
+                      <p-select-wrapper label="Salutation">
+                        <select name="salutation" required>
+                          <option value hidden></option>
+                          <option value="Mr.">Mr.</option>
+                          <option value="Mrs.">Mrs.</option>
+                        </select>
+                      </p-select-wrapper>
+                    </p-flex-item>
+                    <p-flex-item
+                      width="{base: 'full', m: 'one-third'}"
+                      class="ks-form__row-spacing ks-form__row-spacing--zero-m ks-form__grid-item"
+                    >
+                      <p-select-wrapper label="Title">
+                        <select name="title">
+                          <option value></option>
+                          <option value="option 1">Dr.</option>
+                          <option value="option 2">Prof.</option>
+                          <option value="option 3">Prof. Dr.</option>
+                        </select>
+                      </p-select-wrapper>
+                    </p-flex-item>
+                  </p-flex>
+                  <p-flex
+                    direction="{ base: 'column', m: 'row' }"
+                    class="ks-form__row-spacing ks-form__grid-item-container"
+                  >
+                    <p-flex-item
+                      width="{base: 'full', m: 'half'}"
+                      class="ks-form__grid-item"
+                    >
+                      <p-text-field-wrapper label="First name">
+                        <input name="name" type="text" required />
+                      </p-text-field-wrapper>
+                    </p-flex-item>
+                    <p-flex-item
+                      width="{base: 'full', m: 'half'}"
+                      class="ks-form__row-spacing ks-form__row-spacing--zero-m ks-form__grid-item"
+                    >
+                      <p-text-field-wrapper label="Last name">
+                        <input name="surname" type="text" required />
+                      </p-text-field-wrapper>
+                    </p-flex-item>
+                  </p-flex>
+                  <p-text-field-wrapper
+                    label="Email address"
+                    class="ks-form__row-spacing"
+                  >
+                    <!-- A11y improvement: add corresponding input type -->
+                    <input name="email" type="email" required />
+                  </p-text-field-wrapper>
+                  <p-text-field-wrapper
+                    label="Phone number"
+                    class="ks-form__row-spacing"
+                  >
+                    <!-- A11y improvement: add corresponding input type -->
+                    <input name="tel" type="tel" />
+                  </p-text-field-wrapper>
+                </p-fieldset-wrapper>
+                <p-flex
+                  class="ks-form__section-spacing ks-form__grid-item-container"
+                >
+                  <p-flex-item class="ks-form__grid-item">
+                    <p-checkbox-wrapper>
+                      <!-- A11y issue: input element must have an accessible name (https://dequeuniversity.com/rules/axe/4.1/select-name) -->
+                      <span slot="label" id="privacy-label">
+                        I have read and understood the
+                        <a href="#" target="_blank">Privacy Policy</a>
+                      </span>
+                      <input
+                        name="privacy"
+                        type="checkbox"
+                        aria-labelledby="privacy-label"
+                        required
+                      />
+                    </p-checkbox-wrapper>
+                  </p-flex-item>
+                </p-flex>
+                <p-flex
+                  direction="{ base: 'column', s: 'row' }"
+                  class="ks-form__section-spacing ks-form__bottom-spacing ks-form__grid-item-container"
+                >
+                  <p-flex-item
+                    width="{base: 'full', s: 'auto'}"
+                    class="ks-form__grid-item"
+                  >
+                    <!-- A11y issue: Links/Buttons must have discernible and descriptive text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
+                    <p-button
+                      type="submit"
+                      class="ks-form__item-width--full ks-form__item-width--auto-s"
+                      id="ks-submit-btn"
+                    >
+                      Send form
+                    </p-button>
+                  </p-flex-item>
+                  <p-flex-item
+                    width="{base: 'full', s: 'auto'}"
+                    class="ks-form__row-spacing ks-form__row-spacing--zero-s ks-form__grid-item"
+                  >
+                    <!-- A11y issue: Links/Buttons must have discernible and descriptive text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
+                    <p-button
+                      variant="tertiary"
+                      type="reset"
+                      icon="close"
+                      class="ks-form__item-width--full ks-form__item-width--auto-s"
+                    >
+                      Reset form values
+                    </p-button>
+                  </p-flex-item>
+                </p-flex>
+              </form>
+            </p-grid-item>
+          </p-grid>
+        </p-content-wrapper>
+      </section>
+    </main>
+    <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
+    <footer class="ks-footer">
+      <p-content-wrapper width="extended">
+        <p-content-wrapper>
+          <!-- A11y issue: Heading levels should only increase by one (https://dequeuniversity.com/rules/axe/4.1/heading-order) -->
+          <p-headline variant="headline-4" tag="h2" theme="dark">
+            Lorem ipsum
+          </p-headline>
+          <div class="ks-footer__meta">
+            <!-- A11y issue: Text elements must have sufficient color contrast against the background (https://dequeuniversity.com/rules/axe/4.1/color-contrast) -->
+            <p-text theme="dark" size="x-small" class="-spacing-mt-24">
+              © 2020 Porsche Inter Auto CZ spol. s r.o - Testing Extra Long
+              Copyright Text Home Page link Testing special characters
+              originální příslušenstvíCookie Policy. Contact Us via E-mail.
+            </p-text>
+          </div>
+        </p-content-wrapper>
+      </p-content-wrapper>
+    </footer>
+
+    <script>
+      new Splide(".splide", {
+        perPage: 3,
+        perMove: 3,
+        breakpoints: {
+          1000: {
+            perPage: 1,
+            perMove: 1,
+          },
+        },
+        keyboard: true,
+        slideFocus: false,
+      }).mount();
+    </script>
+    <script src="./js/validation.js"></script>
+  </body>
+</html>
