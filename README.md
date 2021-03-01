@@ -75,4 +75,8 @@ So we have to make our hands dirty and dive into the HTML file to fix and optimi
 1. Try to discover the visual and technical differences with the testing tools and manually by yourself 
 1. Open the best practice example **index-accessible.html** in your preferred editor and compare it with the fixes you made
 
-
+### 5. Learn and discuss
+Due to the fact that there are many possible solutions how to fix accessibility issues, it might be worth to push your state to Github and discuss it afterwards with others. 
+If you have followed the naming convention while creating a new branch, your application will also be deployed to Github Pages and can be accessed with the following url:  
+- https://porscheui.github.io/porsche-accessibility-workshop/workshop/your-name/
+- https://porscheui.github.io/porsche-accessibility-workshop/workshop/your-name/index-accessible.html
