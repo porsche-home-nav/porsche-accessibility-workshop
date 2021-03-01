@@ -3,6 +3,9 @@
 Demo application for an accessibility workshop.
 See also the [deployed project](https://porscheui.github.io/porsche-accessibility-workshop).
 
+## Build status
+[![Actions Status](https://github.com/porscheui/porsche-accessibility-workshop/workflows/Porsche%20Accessibility%20Workshop/badge.svg)](https://github.com/porscheui/porsche-accessibility-workshop/actions)
+
 ## Setup
 
 ### Requirements

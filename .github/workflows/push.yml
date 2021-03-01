@@ -6,7 +6,7 @@ on:
       - housekeeping/*
       - issue/*
       - dependabot/**
-name: "Accessibility Workshop Kitchen Sink"
+name: "Porsche Accessibility Workshop"
 jobs:
   build:
     name: "Build"
