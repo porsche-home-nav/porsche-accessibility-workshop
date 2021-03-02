@@ -163,7 +163,7 @@
                   Porsche.
                 </p-text>
                 <p-link variant="tertiary">
-                  <a href="#">Get information of My Porsche</a>
+                  <a href="#">Get information about My Porsche</a>
                 </p-link>
               </div>
             </p-grid-item>
@@ -249,7 +249,10 @@
           </p-grid>
           <p-grid>
             <p-grid-item size="{ base: 12, m: 8 }">
-              <p-button class="-spacing-mt-32">Click here!</p-button>
+              <!-- A11y issue: Links must have discernible and descriptive text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
+              <p-button class="-spacing-mt-32">
+                More about our financial products
+              </p-button>
               <!-- A11y issue: make footnotes accessible (https://www.sitepoint.com/accessible-footnotes-css/) -->
               <p-text
                 id="ks-footnote-label-1"
