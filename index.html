@@ -265,11 +265,13 @@
     </div>
     <div class="ks-contact -spacing-mt-72">
       <p-content-wrapper>
-        <p-grid class="-spacing-mt-48">
-          <p-grid-item size="{ base: 12, m: 8 }">
-            <form novalidate action="#">
-              <p-headline variant="headline-4">Get in touch</p-headline>
-              <p-flex class="ks-form__grid-item-container ks-form__row-spacing">
+        <p-headline variant="headline-4">Get in touch</p-headline>
+        <form novalidate action="#">
+          <p-grid>
+            <p-grid-item size="{ base: 12, m: 6 }">
+              <p-flex
+                class="ks-form__grid-item-container ks-form__row-spacing -spacing-mt-28"
+              >
                 <p-flex-item
                   width="{base: 'full', m: 'half'}"
                   class="ks-form__grid-item"
@@ -294,38 +296,53 @@
                 <textarea name="message" required></textarea>
               </p-textarea-wrapper>
               <p-flex
-                direction="{ base: 'column', m: 'row' }"
-                class="ks-form__grid-item-container ks-form__row-spacing"
+                class="ks-form__section-spacing ks-form__grid-item-container"
               >
-                <p-flex-item
-                  width="{base: 'full', m: 'one-third'}"
-                  class="ks-form__grid-item"
-                >
-                  <p-select-wrapper label="Salutation">
-                    <select name="salutation" required>
-                      <option value hidden></option>
-                      <option value="Mr.">Mr.</option>
-                      <option value="Mrs.">Mrs.</option>
-                    </select>
-                  </p-select-wrapper>
-                </p-flex-item>
-                <p-flex-item
-                  width="{base: 'full', m: 'one-third'}"
-                  class="ks-form__row-spacing ks-form__row-spacing--zero-m ks-form__grid-item"
-                >
-                  <p-select-wrapper label="Title">
-                    <select name="title">
-                      <option value></option>
-                      <option value="option 1">Dr.</option>
-                      <option value="option 2">Prof.</option>
-                      <option value="option 3">Prof. Dr.</option>
-                    </select>
-                  </p-select-wrapper>
+                <p-flex-item class="ks-form__grid-item">
+                  <p-checkbox-wrapper>
+                    <span slot="label">
+                      I have read and understood the
+                      <a href="#" target="_blank">Privacy Policy</a>
+                    </span>
+                    <input name="privacy" type="checkbox" required />
+                  </p-checkbox-wrapper>
                 </p-flex-item>
               </p-flex>
               <p-flex
+                direction="{ base: 'column', s: 'row' }"
+                class="ks-form__section-spacing ks-form__bottom-spacing ks-form__grid-item-container"
+              >
+                <p-flex-item
+                  width="{base: 'full', s: 'auto'}"
+                  class="ks-form__grid-item"
+                >
+                  <p-button
+                    variant="tertiary"
+                    type="reset"
+                    hide-label="true"
+                    icon="close"
+                    class="ks-form__item-width--full ks-form__item-width--auto-s"
+                  >
+                  </p-button>
+                </p-flex-item>
+                <p-flex-item
+                  width="{base: 'full', s: 'auto'}"
+                  class="ks-form__row-spacing ks-form__row-spacing--zero-s ks-form__grid-item"
+                >
+                  <p-button
+                    type="submit"
+                    class="ks-form__item-width--full ks-form__item-width--auto-s"
+                    id="ks-submit-btn"
+                  >
+                    OK
+                  </p-button>
+                </p-flex-item>
+              </p-flex>
+            </p-grid-item>
+            <p-grid-item size="{ base: 12, m: 6 }">
+              <p-flex
                 direction="{ base: 'column', m: 'row' }"
-                class="ks-form__row-spacing ks-form__grid-item-container"
+                class="ks-form__grid-item-container"
               >
                 <p-flex-item
                   width="{base: 'full', m: 'half'}"
@@ -350,58 +367,9 @@
               >
                 <input name="email" type="text" required />
               </p-text-field-wrapper>
-              <p-text-field-wrapper
-                label="Phone number"
-                class="ks-form__row-spacing"
-              >
-                <input name="tel" type="text" />
-              </p-text-field-wrapper>
-              <p-flex
-                class="ks-form__section-spacing ks-form__grid-item-container"
-              >
-                <p-flex-item class="ks-form__grid-item">
-                  <p-checkbox-wrapper>
-                    <span slot="label">
-                      I have read and understood the
-                      <a href="#" target="_blank">Privacy Policy</a>
-                    </span>
-                    <input name="privacy" type="checkbox" required />
-                  </p-checkbox-wrapper>
-                </p-flex-item>
-              </p-flex>
-              <p-flex
-                direction="{ base: 'column', s: 'row' }"
-                class="ks-form__section-spacing ks-form__bottom-spacing ks-form__grid-item-container"
-              >
-                <p-flex-item
-                  width="{base: 'full', s: 'auto'}"
-                  class="ks-form__grid-item"
-                >
-                  <p-button
-                    type="submit"
-                    class="ks-form__item-width--full ks-form__item-width--auto-s"
-                    id="ks-submit-btn"
-                  >
-                    OK
-                  </p-button>
-                </p-flex-item>
-                <p-flex-item
-                  width="{base: 'full', s: 'auto'}"
-                  class="ks-form__row-spacing ks-form__row-spacing--zero-s ks-form__grid-item"
-                >
-                  <p-button
-                    variant="tertiary"
-                    type="reset"
-                    hide-label="true"
-                    icon="close"
-                    class="ks-form__item-width--full ks-form__item-width--auto-s"
-                  >
-                  </p-button>
-                </p-flex-item>
-              </p-flex>
-            </form>
-          </p-grid-item>
-        </p-grid>
+            </p-grid-item>
+          </p-grid>
+        </form>
       </p-content-wrapper>
     </div>
     <div class="ks-footer">

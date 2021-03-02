@@ -51,17 +51,6 @@ const validate = (e) => {
       removeAttributes(el.parentElement, ["state", "message"]);
     }
 
-    // Salutation
-    if (el.name === "salutation" && el.value === "") {
-      setAttributes(el.parentElement, {
-        state: "error",
-        message: accessible ? "Please choose a salutation" : "Nothing chosen",
-      });
-      return false;
-    } else {
-      removeAttributes(el.parentElement, ["state", "message"]);
-    }
-
     // First
     if (el.name === "name" && el.value === "") {
       setAttributes(el.parentElement, {

@@ -411,7 +411,7 @@
                 </p-headline>
                 <!-- A11y issue: Grouping controls (https://www.w3.org/WAI/tutorials/forms/grouping/) -->
                 <p-fieldset-wrapper
-                  label="Some legend label"
+                  label="Your Inquiry"
                   class="ks-form__section-spacing"
                 >
                   <p-flex class="ks-form__grid-item-container">
@@ -448,36 +448,7 @@
                   label="Personal Data"
                   class="ks-form__section-spacing"
                 >
-                  <p-flex
-                    direction="{ base: 'column', m: 'row' }"
-                    class="ks-form__grid-item-container ks-form__row-spacing"
-                  >
-                    <p-flex-item
-                      width="{base: 'full', m: 'one-third'}"
-                      class="ks-form__grid-item"
-                    >
-                      <p-select-wrapper label="Salutation">
-                        <select name="salutation" required>
-                          <option value hidden></option>
-                          <option value="Mr.">Mr.</option>
-                          <option value="Mrs.">Mrs.</option>
-                        </select>
-                      </p-select-wrapper>
-                    </p-flex-item>
-                    <p-flex-item
-                      width="{base: 'full', m: 'one-third'}"
-                      class="ks-form__row-spacing ks-form__row-spacing--zero-m ks-form__grid-item"
-                    >
-                      <p-select-wrapper label="Title">
-                        <select name="title">
-                          <option value></option>
-                          <option value="option 1">Dr.</option>
-                          <option value="option 2">Prof.</option>
-                          <option value="option 3">Prof. Dr.</option>
-                        </select>
-                      </p-select-wrapper>
-                    </p-flex-item>
-                  </p-flex>
+                  <!-- A11y issue: focus order should be logical (https://www.w3.org/WAI/WCAG21/Understanding/focus-order) -->
                   <p-flex
                     direction="{ base: 'column', m: 'row' }"
                     class="ks-form__row-spacing ks-form__grid-item-container"
@@ -505,13 +476,6 @@
                   >
                     <!-- A11y improvement: add corresponding input type -->
                     <input name="email" type="email" required />
-                  </p-text-field-wrapper>
-                  <p-text-field-wrapper
-                    label="Phone number"
-                    class="ks-form__row-spacing"
-                  >
-                    <!-- A11y improvement: add corresponding input type -->
-                    <input name="tel" type="tel" />
                   </p-text-field-wrapper>
                 </p-fieldset-wrapper>
                 <p-flex
