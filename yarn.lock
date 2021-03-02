@@ -7,10 +7,10 @@
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/assets/-/@porsche-design-system/assets-3.1.0.tgz#506a2f3549e0ba669b23e65360c0895256210067"
   integrity sha1-UGovNUngumabI+ZTYMCJUlYhAGc=
 
-"@porsche-design-system/components-js@2.0.0-rc.3":
-  version "2.0.0-rc.3"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.0.0-rc.3.tgz#8b7196f9a7aaac5fa040a101099a8e1df9aa2364"
-  integrity sha1-i3GW+aeqrF+gQKEBCZqOHfmqI2Q=
+"@porsche-design-system/components-js@2.0.0-rc.4":
+  version "2.0.0-rc.4"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.0.0-rc.4.tgz#3f170654c10598caeb9ccee9738990696c53e75d"
+  integrity sha1-PxcGVMEFmMrrnM7pc4mQaWxT510=
 
 "@porsche-design-system/utilities@^4.0.0":
   version "4.0.0"
