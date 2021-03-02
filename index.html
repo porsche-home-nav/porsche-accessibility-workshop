@@ -361,10 +361,21 @@
                   </p-text-field-wrapper>
                 </p-flex-item>
               </p-flex>
-              <p-text-field-wrapper
-                label="Email address"
-                class="ks-form__row-spacing"
-              >
+              <p-text-field-wrapper class="ks-form__row-spacing">
+                <span slot="label" style="position: relative">
+                  Email address
+                  <p-icon
+                    name="information"
+                    size="x-small"
+                    class="ks-tooltip"
+                  ></p-icon>
+                  <span class="ks-tooltip__tip">
+                    <p-text size="x-small">
+                      Your email address should have the following format:
+                      name@company.com
+                    </p-text>
+                  </span>
+                </span>
                 <input name="email" type="text" required />
               </p-text-field-wrapper>
             </p-grid-item>

@@ -470,8 +470,10 @@
                       </p-text-field-wrapper>
                     </p-flex-item>
                   </p-flex>
+                  <!-- A11y issue: don't uses inaccessible tooltips. Provide text with description prop instead. -->
                   <p-text-field-wrapper
                     label="Email address"
+                    description="Your email address should have the following format: name@company.com"
                     class="ks-form__row-spacing"
                   >
                     <!-- A11y improvement: add corresponding input type -->
