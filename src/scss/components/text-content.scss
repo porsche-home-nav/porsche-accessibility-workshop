@@ -1,9 +1,21 @@
 @import "~@porsche-design-system/utilities/scss";
-.ks-text-content {
-  padding: #{$p-spacing-48} 0;
-  background-color: $p-color-background-surface;
+.ks-tooltip {
+  $bem-block: &;
 
-  &__footnote {
-    color: $p-color-state-disabled;
+  & + #{$bem-block}__tip {
+    display: none;
+    background-color: $p-color-theme-dark-default;
+    padding: $p-spacing-8;
+    box-shadow: 0 p-px-to-rem(2px) p-px-to-rem(4px) 0 rgba(0, 0, 0, 0.05),
+      0 p-px-to-rem(15px) p-px-to-rem(20px) 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:hover + &__tip {
+    position: absolute;
+    display: block;
+    z-index: 3;
+    bottom: 100%;
+    left: 100%;
+    max-width: 200px;
   }
 }
