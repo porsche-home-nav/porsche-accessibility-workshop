@@ -29,6 +29,10 @@ a {
   margin-top: $p-spacing-24;
 }
 
+.-spacing-mt-28 {
+  margin-top: p-px-to-rem(28px);
+}
+
 .-spacing-mt-32 {
   margin-top: $p-layout-large;
 }
