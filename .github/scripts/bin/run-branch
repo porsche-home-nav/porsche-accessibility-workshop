@@ -5,6 +5,6 @@ set -o pipefail
 
 P_CURRENT_BRANCH="${GITHUB_REF:11}"
 if [[ "${P_CURRENT_BRANCH}" == "master" ]]; then
-  echo "BRANCH_NAME=" >> $GITHUB_ENV
+  echo 'BRANCH_NAME=""' >> $GITHUB_ENV
 fi
   echo "BRANCH_NAME=${P_CURRENT_BRANCH}" >> $GITHUB_ENV

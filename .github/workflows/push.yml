@@ -46,5 +46,4 @@ jobs:
           branch: gh-pages
           folder: ./build
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-          if: github.refs != 'master'
           target-folder: ${{ env.BRANCH_NAME }}
