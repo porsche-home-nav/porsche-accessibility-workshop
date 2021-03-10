@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--PLACEHOLDER_PORSCHE_DESIGN_SYSTEM_INITIAL_STYLES--><style>p-banner,p-button,p-button-pure,p-checkbox-wrapper,p-content-wrapper,p-divider,p-fieldset-wrapper,p-flex,p-flex-item,p-grid,p-grid-item,p-headline,p-icon,p-link,p-link-pure,p-link-social,p-marque,p-modal,p-pagination,p-radio-button-wrapper,p-select-wrapper,p-spinner,p-tabs,p-tabs-bar,p-tabs-item,p-text,p-text-field-wrapper,p-text-list,p-text-list-item,p-textarea-wrapper{visibility:hidden}</style>
+    <link rel="stylesheet" href="./style/styles.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide-core.min.css"
+    />
+    <script src="node_modules/@porsche-design-system/components-js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      porscheDesignSystem.load();
+    </script>
+    <div class="ks-header">
+      <p-content-wrapper>
+        <p-flex align-items="flex-end">
+          <p-flex-item>
+            <a href="#" class="ks-header__marque">
+              <p-marque></p-marque>
+            </a>
+          </p-flex-item>
+          <p-flex-item>
+            <div class="ks-header__nav">
+              <a href="#">Models</a>
+              <a href="#">Services</a>
+              <a href="#">Experiences</a>
+              <a href="#">Shop</a>
+              <a href="#">Company</a>
+            </div>
+          </p-flex-item>
+        </p-flex>
+      </p-content-wrapper>
+    </div>
+    <div class="ks-hero">
+      <p-content-wrapper width="extended">
+        <a href="#">
+          <p-content-wrapper class="ks-hero__text">
+            <p-button-pure size="x-large" weight="thin" theme="dark">
+              Moments of Excitement
+              <p slot="subline">Discover the Porsche Ice Experience.</p>
+            </p-button-pure>
+          </p-content-wrapper>
+          <div class="ks-hero__mood">
+            <img src="./assets/porsche-911-winter-road-2.jpg" />
+          </div>
+        </a>
+      </p-content-wrapper>
+    </div>
+    <div class="ks-cards -spacing-mt-72">
+      <p-content-wrapper>
+        <p-grid>
+          <p-grid-item size="4">
+            <a href="#" class="ks-cards__item">
+              <img
+                src="./assets/ks-offer-teaser-1.jpg"
+                class="ks-cards__mood"
+                alt="Porsche"
+              />
+              <p-text
+                weight="thin"
+                size="medium"
+                color="inherit"
+                class="ks-cards__headline"
+              >
+                Protection Plan
+              </p-text>
+              <p-text class="ks-cards__desc">
+                Protection Plan suite of optional products helps you keep your
+                vehicle looking its best. These optional protection plans
+                provide peace of mind allowing you to simply enjoy the drive.
+              </p-text>
+              <p-button variant="tertiary">Click here!</p-button>
+            </a>
+          </p-grid-item>
+          <p-grid-item size="4">
+            <a href="#" class="ks-cards__item">
+              <img
+                src="./assets/ks-offer-teaser-2.jpg"
+                class="ks-cards__mood"
+                alt="Porsche"
+              />
+              <div class="ks-cards__desc-container">
+                <p-text
+                  weight="thin"
+                  size="medium"
+                  color="inherit"
+                  class="ks-cards__headline"
+                >
+                  My Porsche
+                </p-text>
+                <p-text class="ks-cards__desc">
+                  Each moment spent behind the wheel is engineered to be a
+                  thrilling reminder of what driving should be. To help keep you
+                  in control of your Porsche Financial Services Canada account,
+                  you can link your account after registering your vehicle in My
+                  Porsche.
+                </p-text>
+                <p-button variant="tertiary">Click here!</p-button>
+              </div>
+            </a>
+          </p-grid-item>
+          <p-grid-item size="4">
+            <a href="#" class="ks-cards__item">
+              <img
+                src="./assets/ks-offer-teaser-3.jpg"
+                class="ks-cards__mood"
+                alt="Porsche"
+              />
+              <div class="ks-cards__desc-container">
+                <p-text
+                  weight="thin"
+                  size="medium"
+                  color="inherit"
+                  class="ks-cards__headline"
+                >
+                  My Porsche
+                </p-text>
+                <p-text class="ks-cards__desc">
+                  Tauchen Sie ein in die Welt von Porsche Tequipment. Von
+                  fahrzeugindividuellen Zubehör Produkten bis hin zu allgemeinen
+                  Zubehör Lösungen: Das vielfältige Produktprogramm finden Sie
+                  in unserem Porsche.
+                </p-text>
+                <p-button variant="tertiary">Click here!</p-button>
+              </div>
+            </a>
+          </p-grid-item>
+        </p-grid>
+      </p-content-wrapper>
+    </div>
+    <div class="ks-text-content -spacing-mt-72">
+      <p-content-wrapper>
+        <p-headline variant="headline-3">Lorem Headline 1</p-headline>
+        <p-text class="-spacing-mt-16">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr<sup>1</sup>,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+          aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+          dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+          sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+          labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+          et accusam et justo duo dolores et ea rebum. Stet clita kasd
+          gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p-text>
+        <p-headline variant="headline-3" class="-spacing-mt-32">
+          Lorem Headline 2
+        </p-headline>
+        <p-text class="-spacing-mt-16">
+          sadipscing elitr, sed diam nonumy eirmod<sup>2</sup> tempor invidunt
+          ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+          eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+          gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p-text>
+        <p-button class="-spacing-mt-32">Click here!</p-button>
+        <p-text
+          size="x-small"
+          color="inherit"
+          class="ks-text-content__footnote -spacing-mt-32"
+        >
+          <sup>1</sup> Data determined in accordance with the measurement method
+          required by law. Since 1 September 2017 certain new cars have been
+          type approved in accordance with the Worldwide Harmonised Light
+          Vehicles Test Procedure (WLTP), a more realistic test procedure to
+          measure fuel/electricity consumption and CO₂ emissions.
+        </p-text>
+        <p-text
+          size="x-small"
+          color="inherit"
+          class="ks-text-content__footnote -spacing-mt-16"
+        >
+          <sup>2</sup> Due to the more realistic test conditions, the
+          fuel/electricity consumption and CO₂ emission values determined in
+          accordance with the WLTP will, in many cases, be higher than those
+          determined in accordance with the NEDC.
+        </p-text>
+      </p-content-wrapper>
+    </div>
+    <div class="ks-carousel -spacing-mt-72">
+      <p-content-wrapper>
+        <div class="splide">
+          <div class="splide__arrows">
+            <div class="splide__arrow splide__arrow--prev">
+              <p-icon name="arrow-head-left" size="large"></p-icon>
+            </div>
+            <div class="splide__arrow splide__arrow--next">
+              <p-icon name="arrow-head-right" size="large"></p-icon>
+            </div>
+          </div>
+          <div class="splide__track">
+            <p-grid class="splide__list">
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/Cayenne.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">Cayenne Models</a>
+                </p-link>
+              </p-grid-item>
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/Macan.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">Macan Models</a>
+                </p-link>
+              </p-grid-item>
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/Panamera.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">Panamera Models</a>
+                </p-link>
+              </p-grid-item>
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/Taycan.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">Taycan Models</a>
+                </p-link>
+              </p-grid-item>
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/718.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">718 Models</a>
+                </p-link>
+              </p-grid-item>
+              <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
+                <img
+                  src="./assets/911.jpg"
+                  alt="Porsche"
+                  class="ks-carousel__mood"
+                />
+                <p-link variant="tertiary">
+                  <a href="#">911 Models</a>
+                </p-link>
+              </p-grid-item>
+            </p-grid>
+          </div>
+        </div>
+      </p-content-wrapper>
+    </div>
+    <div class="ks-contact -spacing-mt-72">
+      <p-content-wrapper>
+        <p-headline variant="headline-4">Get in touch</p-headline>
+        <form novalidate action="#">
+          <p-grid>
+            <p-grid-item size="{ base: 12, m: 6 }">
+              <p-flex
+                class="ks-form__grid-item-container ks-form__row-spacing -spacing-mt-28"
+              >
+                <p-flex-item
+                  width="{base: 'full', m: 'half'}"
+                  class="ks-form__grid-item"
+                >
+                  <p-select-wrapper>
+                    <select name="category" required>
+                      <option value selected disabled>Choose Category</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                  </p-select-wrapper>
+                </p-flex-item>
+              </p-flex>
+              <p-text-field-wrapper
+                label="Subject"
+                class="ks-form__row-spacing"
+              >
+                <input name="subject" type="text" required />
+              </p-text-field-wrapper>
+              <p-textarea-wrapper label="Message" class="ks-form__row-spacing">
+                <textarea name="message" required></textarea>
+              </p-textarea-wrapper>
+              <p-flex
+                class="ks-form__section-spacing ks-form__grid-item-container"
+              >
+                <p-flex-item class="ks-form__grid-item">
+                  <p-checkbox-wrapper>
+                    <span slot="label">
+                      I have read and understood the
+                      <a href="#" target="_blank">Privacy Policy</a>
+                    </span>
+                    <input name="privacy" type="checkbox" required />
+                  </p-checkbox-wrapper>
+                </p-flex-item>
+              </p-flex>
+              <p-flex
+                direction="{ base: 'column', s: 'row' }"
+                class="ks-form__section-spacing ks-form__bottom-spacing ks-form__grid-item-container"
+              >
+                <p-flex-item
+                  width="{base: 'full', s: 'auto'}"
+                  class="ks-form__grid-item"
+                >
+                  <p-button
+                    variant="tertiary"
+                    type="reset"
+                    hide-label="true"
+                    icon="close"
+                    class="ks-form__item-width--full ks-form__item-width--auto-s"
+                  >
+                  </p-button>
+                </p-flex-item>
+                <p-flex-item
+                  width="{base: 'full', s: 'auto'}"
+                  class="ks-form__row-spacing ks-form__row-spacing--zero-s ks-form__grid-item"
+                >
+                  <p-button
+                    type="submit"
+                    class="ks-form__item-width--full ks-form__item-width--auto-s"
+                    id="ks-submit-btn"
+                  >
+                    OK
+                  </p-button>
+                </p-flex-item>
+              </p-flex>
+            </p-grid-item>
+            <p-grid-item size="{ base: 12, m: 6 }">
+              <p-flex
+                direction="{ base: 'column', m: 'row' }"
+                class="ks-form__grid-item-container"
+              >
+                <p-flex-item
+                  width="{base: 'full', m: 'half'}"
+                  class="ks-form__grid-item"
+                >
+                  <p-text-field-wrapper label="First name">
+                    <input name="name" type="text" required />
+                  </p-text-field-wrapper>
+                </p-flex-item>
+                <p-flex-item
+                  width="{base: 'full', m: 'half'}"
+                  class="ks-form__row-spacing ks-form__row-spacing--zero-m ks-form__grid-item"
+                >
+                  <p-text-field-wrapper label="Last name">
+                    <input name="surname" type="text" required />
+                  </p-text-field-wrapper>
+                </p-flex-item>
+              </p-flex>
+              <p-text-field-wrapper class="ks-form__row-spacing">
+                <span slot="label" style="position: relative">
+                  Email address
+                  <p-icon
+                    name="information"
+                    size="x-small"
+                    class="ks-tooltip"
+                  ></p-icon>
+                  <span class="ks-tooltip__tip">
+                    <p-text size="x-small">
+                      Your email address should have the following format:
+                      name@company.com
+                    </p-text>
+                  </span>
+                </span>
+                <input name="email" type="text" required />
+              </p-text-field-wrapper>
+            </p-grid-item>
+          </p-grid>
+        </form>
+      </p-content-wrapper>
+    </div>
+    <div class="ks-footer">
+      <p-content-wrapper width="extended">
+        <p-content-wrapper>
+          <p-headline variant="headline-4" theme="dark">
+            Lorem ipsum
+          </p-headline>
+          <div class="ks-footer__meta">
+            <p-text color="inherit" size="x-small" class="-spacing-mt-24">
+              © 2020 Porsche Inter Auto CZ spol. s r.o - Testing Extra Long
+              Copyright Text Home Page link Testing special characters
+              originální příslušenstvíCookie PolicyContact Us via E-mail
+            </p-text>
+          </div>
+        </p-content-wrapper>
+      </p-content-wrapper>
+    </div>
+
+    <script>
+      new Splide(".splide", {
+        perPage: 3,
+        perMove: 3,
+        breakpoints: {
+          1000: {
+            perPage: 1,
+            perMove: 1,
+          },
+        },
+        accessibility: false,
+        keyboard: false,
+        slideFocus: false,
+      }).mount();
+    </script>
+    <script src="./js/validation.js"></script>
+  </body>
+</html>
