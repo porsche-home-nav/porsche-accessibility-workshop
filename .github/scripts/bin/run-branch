@@ -3,8 +3,18 @@
 set -o errexit
 set -o pipefail
 
+isCurrentBranchMasterBranch() {
+  if [[ "${P_CURRENT_BRANCH}" == "master" ]]; then
+    return 0
+  fi
+  return 1
+}
+
 P_CURRENT_BRANCH="${GITHUB_REF:11}"
-if [[ "${P_CURRENT_BRANCH}" == "master" ]]; then
+
+if isCurrentBranchMasterBranch; then
   echo 'BRANCH_NAME=""' >> $GITHUB_ENV
-fi
+else
   echo "BRANCH_NAME=${P_CURRENT_BRANCH}" >> $GITHUB_ENV
+fi
+
