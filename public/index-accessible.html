@@ -24,7 +24,7 @@
     <!-- A11y issue: Use HTML sectioning elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning) -->
     <header class="ks-header">
       <!-- A11y issue: The skip-link target should exist and be focusable (https://dequeuniversity.com/rules/axe/4.1/skip-link) -->
-      <a href="#ks-main-content" class="ks-skip-link">
+      <a href="#ks-main-content" class="ks-header__skip-link">
         <p-link>Skip to Content</p-link>
       </a>
       <p-content-wrapper>
@@ -36,29 +36,30 @@
             </a>
           </p-flex-item>
           <p-flex-item>
+            <div class="ks-header__nav-toggle">
+              <!-- A11y improvement: set additional aria attributes -->
+              <!-- A11y issue: Buttons must have discernible text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
+              <!-- A11y issue: use semantic action elements which have focus and behave like it is intended -->
+              <!-- "If it looks like a button and acts like a button make it a <button>" -->
+              <p-button-pure
+                icon="menu-lines"
+                id="ks-header__nav-toggle"
+                aria-controls="ks-header__nav"
+                aria-haspopup="true"
+              >
+                Menu
+              </p-button-pure>
+            </div>
             <!-- A11y issue: Add more HTML semantic (https://www.w3.org/WAI/tutorials/menus/structure/#identify-menus) -->
-            <nav class="ks-header__nav">
-              <!-- A11y issue: Use HTML structuring elements (https://developer.mozilla.org/en-US/docs/Web/HTML/Element#text_content) -->
-              <ul>
-                <li>
-                  <!-- A11y issue: Indicate the current item (https://www.w3.org/WAI/tutorials/menus/structure/#indicate-the-current-item) -->
-                  <!-- A11y issue: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible (https://www.w3.org/WAI/WCAG21/quickref/#focus-visible) -->
-                  <a href="#" aria-current="page">Models</a>
-                </li>
-                <li>
-                  <!-- A11y improvement: larger click-area -->
-                  <a href="#">Services</a>
-                </li>
-                <li>
-                  <a href="#">Experiences</a>
-                </li>
-                <li>
-                  <a href="#">Shop</a>
-                </li>
-                <li>
-                  <a href="#">Company</a>
-                </li>
-              </ul>
+            <nav class="ks-header__nav" id="ks-header__nav">
+              <!-- A11y issue: Indicate the current item (https://www.w3.org/WAI/tutorials/menus/structure/#indicate-the-current-item) -->
+              <!-- A11y issue: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible (https://www.w3.org/WAI/WCAG21/quickref/#focus-visible) -->
+              <a href="#" aria-current="page">Models</a>
+              <!-- A11y improvement: larger click-area -->
+              <a href="#">Services</a>
+              <a href="#">Experiences</a>
+              <a href="#">Shop</a>
+              <a href="#">Company</a>
             </nav>
           </p-flex-item>
         </p-flex>
@@ -74,7 +75,11 @@
             <!-- A11y issue: Page must contain a level-one heading (https://dequeuniversity.com/rules/axe/4.1/page-has-heading-one) -->
             <p-headline color="inherit" variant="inherit">
               <!-- A11y issue: HTML validation error: do not nest <button> inside link <a> -->
-              <p-link-pure size="x-large" weight="bold" theme="dark">
+              <p-link-pure
+                size="{ base: 'medium', l: 'x-large' }"
+                weight="bold"
+                theme="dark"
+              >
                 <!-- A11y improvement: add more contextual sense with aria-label -->
                 <a
                   href="#"
@@ -174,7 +179,7 @@
                   tag="h2"
                   class="ks-cards__headline"
                 >
-                  Lorem ipsum
+                  Porsche Tequipment
                 </p-headline>
                 <img
                   src="./assets/ks-offer-teaser-3.jpg"
@@ -182,10 +187,10 @@
                   alt="Porsche Cayenne in black on the road"
                 />
                 <p-text class="ks-cards__desc">
-                  Tauchen Sie ein in die Welt von Porsche Tequipment. Von
-                  fahrzeugindividuellen Zubehör Produkten bis hin zu allgemeinen
-                  Zubehör Lösungen: Das vielfältige Produktprogramm finden Sie
-                  in unserem Porsche.
+                  Immerse yourself in the world of Porsche Tequipment. From
+                  vehicle-specific accessory products to general accessory
+                  solutions: You will find the diverse product range in our
+                  Porsche.
                 </p-text>
                 <p-link variant="tertiary">
                   <a href="#">More information about XYZ</a>
@@ -337,6 +342,7 @@
                     alt="Porsche Macan in silver from the side"
                     class="ks-carousel__mood"
                   />
+                  <!-- A11y issue: Links/Buttons must have discernible and descriptive text (https://dequeuniversity.com/rules/axe/4.1/link-name) -->
                   <p-link variant="tertiary">
                     <a href="#">Macan Models</a>
                   </p-link>
@@ -551,9 +557,9 @@
           <div class="ks-footer__meta">
             <!-- A11y issue: Text elements must have sufficient color contrast against the background (https://dequeuniversity.com/rules/axe/4.1/color-contrast) -->
             <p-text theme="dark" size="x-small" class="-spacing-mt-24">
-              © 2020 Porsche Inter Auto CZ spol. s r.o - Testing Extra Long
-              Copyright Text Home Page link Testing special characters
-              originální příslušenstvíCookie Policy. Contact Us via E-mail.
+              © 2021 Porsche Inter Auto CZ spol. s r.o - Testing Extra Long
+              Copyright Text Home Page link Testing special characters Cookie
+              Policy. Contact Us via E-mail.
             </p-text>
           </div>
         </p-content-wrapper>
@@ -561,6 +567,10 @@
     </footer>
 
     <script>
+      /**
+       * A11y improvement: if plugins are used, be sure that they support accessibility (often added with additional properties)
+       * Good slider plugins with accessibility support built in: https://swiperjs.com/, https://splidejs.com/, https://accessible360.github.io/accessible-slick/
+       */
       new Splide(".splide", {
         perPage: 3,
         perMove: 3,
@@ -574,6 +584,6 @@
         slideFocus: false,
       }).mount();
     </script>
-    <script src="./js/validation.js"></script>
+    <script src="./js/custom-scripts.js"></script>
   </body>
 </html>

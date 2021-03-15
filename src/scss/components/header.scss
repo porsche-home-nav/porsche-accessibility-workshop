@@ -1,16 +1,26 @@
 @import "~@porsche-design-system/utilities/scss";
+
+@mixin ks-sr-visible() {
+  width: 100%;
+  height: auto;
+  white-space: normal;
+  overflow: visible;
+  clip: auto;
+  clip-path: none;
+}
+
+@mixin ks-sr-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
 .ks-header {
   position: relative;
-
-  .ks-skip-link {
-    position: absolute;
-    top: -100%;
-    &:focus,
-    &:focus-visible {
-      top: 0;
-      z-index: 2;
-    }
-  }
 
   &__marque {
     position: relative;
@@ -22,10 +32,43 @@
     background-color: #fff;
   }
 
+  &__nav-toggle {
+    position: absolute;
+    right: $p-spacing-16;
+    bottom: $p-spacing-24;
+
+    @include p-media-query("m") {
+      display: none;
+    }
+  }
+
   &__nav {
     padding-bottom: $p-spacing-24;
     padding-left: $p-spacing-24;
     display: flex;
+    flex-direction: column;
+
+    @include ks-sr-hidden();
+
+    &.is-active {
+      @include ks-sr-visible();
+      position: absolute;
+      right: 0;
+      top: 100px;
+      z-index: 3;
+      width: auto;
+      padding: $p-spacing-16;
+      background-color: $p-color-background-default;
+      box-shadow: 0 p-px-to-rem(2px) p-px-to-rem(4px) 0 rgba(0, 0, 0, 0.05),
+        0 p-px-to-rem(15px) p-px-to-rem(20px) 0 rgba(0, 0, 0, 0.2);
+    }
+
+    @include p-media-query("m") {
+      @include ks-sr-visible();
+      position: static !important;
+      box-shadow: none !important;
+      flex-direction: row;
+    }
 
     a {
       display: block;
@@ -42,6 +85,16 @@
 
 .ks-accessible {
   .ks-header {
+    &__skip-link {
+      position: absolute;
+      top: -100%;
+      &:focus,
+      &:focus-visible {
+        top: 0;
+        z-index: 2;
+      }
+    }
+
     &__marque {
       &:focus {
         @include p-focus();
@@ -50,13 +103,7 @@
     }
 
     &__nav {
-      display: block;
       padding-bottom: $p-spacing-16;
-
-      ul {
-        display: flex;
-        list-style-type: none;
-      }
 
       a {
         padding: $p-spacing-8 $p-spacing-24;

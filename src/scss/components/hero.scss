@@ -4,7 +4,6 @@
 
   &__mood {
     padding-top: 38.4375%;
-    overflow: hidden;
     position: relative;
 
     img {
@@ -35,8 +34,18 @@
       figcaption {
         position: absolute;
         z-index: 2;
-        right: $p-spacing-32;
-        bottom: 5%;
+        padding: $p-spacing-8 $p-spacing-32;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background-color: $p-color-theme-dark-background-surface;
+        @include p-media-query("m") {
+          top: auto;
+          left: auto;
+          right: $p-spacing-32;
+          bottom: 5%;
+          background: none;
+        }
       }
 
       img {

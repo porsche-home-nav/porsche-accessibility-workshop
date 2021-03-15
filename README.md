@@ -6,7 +6,7 @@ See also the [deployed project](https://porscheui.github.io/porsche-accessibilit
 ## Build status
 [![Actions Status](https://github.com/porscheui/porsche-accessibility-workshop/workflows/Porsche%20Accessibility%20Workshop/badge.svg)](https://github.com/porscheui/porsche-accessibility-workshop/actions)
 
-## Requirements
+## Prerequisites
 - [Node.js](https://nodejs.org)
 - [Yarn](https://yarnpkg.com)
 - [Chrome Browser](https://www.google.com/intl/de_de/chrome/)  
@@ -21,7 +21,7 @@ Run `yarn`
 ### Start
 Run `yarn start`
 
-### Start development environment
+### Start in watch mode (rebuilds app on change for easier development)
 Run `yarn start:watch`
 
 --- 

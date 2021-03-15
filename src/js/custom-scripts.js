@@ -101,3 +101,20 @@ const validate = (e) => {
 };
 
 submitBtn.addEventListener("click", validate);
+
+/**
+ * Toggle navigation for mobile
+ */
+const toggleButton = document.getElementById("ks-header__nav-toggle");
+const navItems = document.getElementById("ks-header__nav");
+toggleButton.addEventListener("click", () => {
+  if (navItems.classList.contains("is-active")) {
+    toggleButton.setAttribute("aria-expanded", "false");
+    toggleButton.setAttribute("icon", "menu-lines");
+    navItems.classList.remove("is-active");
+  } else {
+    toggleButton.setAttribute("aria-expanded", "true");
+    toggleButton.setAttribute("icon", "close");
+    navItems.classList.add("is-active");
+  }
+});
