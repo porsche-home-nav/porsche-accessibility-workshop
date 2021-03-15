@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Test.</title>
+    <title>Test</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
@@ -30,7 +30,10 @@
             </a>
           </p-flex-item>
           <p-flex-item>
-            <div class="ks-header__nav">
+            <div class="ks-header__nav-toggle">
+              <p-icon name="menu-lines" id="ks-header__nav-toggle"></p-icon>
+            </div>
+            <div class="ks-header__nav" id="ks-header__nav">
               <a href="#">Models</a>
               <a href="#">Services</a>
               <a href="#">Experiences</a>
@@ -123,13 +126,13 @@
                   color="inherit"
                   class="ks-cards__headline"
                 >
-                  My Porsche
+                  Porsche Tequipment
                 </p-text>
                 <p-text class="ks-cards__desc">
-                  Tauchen Sie ein in die Welt von Porsche Tequipment. Von
-                  fahrzeugindividuellen Zubehör Produkten bis hin zu allgemeinen
-                  Zubehör Lösungen: Das vielfältige Produktprogramm finden Sie
-                  in unserem Porsche.
+                  Immerse yourself in the world of Porsche Tequipment. From
+                  vehicle-specific accessory products to general accessory
+                  solutions: You will find the diverse product range in our
+                  Porsche.
                 </p-text>
                 <p-button variant="tertiary">Click here!</p-button>
               </div>
@@ -205,7 +208,7 @@
                   class="ks-carousel__mood"
                 />
                 <p-link variant="tertiary">
-                  <a href="#">Cayenne Models</a>
+                  <a href="#">Models</a>
                 </p-link>
               </p-grid-item>
               <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
@@ -215,7 +218,7 @@
                   class="ks-carousel__mood"
                 />
                 <p-link variant="tertiary">
-                  <a href="#">Macan Models</a>
+                  <a href="#">Models</a>
                 </p-link>
               </p-grid-item>
               <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
@@ -225,7 +228,7 @@
                   class="ks-carousel__mood"
                 />
                 <p-link variant="tertiary">
-                  <a href="#">Panamera Models</a>
+                  <a href="#">Models</a>
                 </p-link>
               </p-grid-item>
               <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
@@ -235,7 +238,7 @@
                   class="ks-carousel__mood"
                 />
                 <p-link variant="tertiary">
-                  <a href="#">Taycan Models</a>
+                  <a href="#">Models</a>
                 </p-link>
               </p-grid-item>
               <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
@@ -245,7 +248,7 @@
                   class="ks-carousel__mood"
                 />
                 <p-link variant="tertiary">
-                  <a href="#">718 Models</a>
+                  <a href="#">Models</a>
                 </p-link>
               </p-grid-item>
               <p-grid-item size="{ base: 12, m: 4 }" class="splide__slide">
@@ -255,7 +258,7 @@
                   class="ks-carousel__mood"
                 />
                 <p-link variant="tertiary">
-                  <a href="#">911 Models</a>
+                  <a href="#">Models</a>
                 </p-link>
               </p-grid-item>
             </p-grid>
@@ -265,7 +268,7 @@
     </div>
     <div class="ks-contact -spacing-mt-72">
       <p-content-wrapper>
-        <p-headline variant="headline-4">Get in touch</p-headline>
+        <p-headline variant="headline-3">Get in touch</p-headline>
         <form novalidate action="#">
           <p-grid>
             <p-grid-item size="{ base: 12, m: 6 }">
@@ -391,9 +394,9 @@
           </p-headline>
           <div class="ks-footer__meta">
             <p-text color="inherit" size="x-small" class="-spacing-mt-24">
-              © 2020 Porsche Inter Auto CZ spol. s r.o - Testing Extra Long
-              Copyright Text Home Page link Testing special characters
-              originální příslušenstvíCookie PolicyContact Us via E-mail
+              © 2021 Porsche Inter Auto CZ spol. s r.o - Testing Extra Long
+              Copyright Text Home Page link Testing special characters Cookie
+              PolicyContact Us via E-mail
             </p-text>
           </div>
         </p-content-wrapper>
@@ -415,6 +418,6 @@
         slideFocus: false,
       }).mount();
     </script>
-    <script src="./js/validation.js"></script>
+    <script src="./js/custom-scripts.js"></script>
   </body>
 </html>
